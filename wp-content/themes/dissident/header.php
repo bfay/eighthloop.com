@@ -34,23 +34,29 @@
 	
 	<body <?php body_class(); ?>>
 	
-		<div id="container">
-			
-			<header class="header" role="banner">
-			
-				<div id="inner-header" class="wrap clearfix">
-					
-					<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
-					<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><img src="http://images.eighthloop.com/eighthloop-logo.png" alt="Eighth Loop Logo">
-					
-					<!-- if you'd like to use the site description you can un-comment it below -->
-					<?php // bloginfo('description'); ?>
-					
-					
-					<nav role="navigation">
-						<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
-					</nav>
-				
-				</div> <!-- end #inner-header -->
-			
-			</header> <!-- end header -->
+    <!-- Start the main container -->
+
+    <div id="container" class="container" role="document">
+        <div class="row">
+            <header class="twelve columns main-nav" role="navigation">
+                <!-- Row for blog navigation -->
+
+                <div class="initials left"><img src="http://cdn.images.eighthloop.com/eighthloop-logo.png" alt="Byron Fay Initials"></div>
+
+                <nav class="nav-bar right" role="navigation">
+                    <div class="hiphop jump dim centered">
+                        <div class="item">
+                            <a href="front-page"><img class="image" src="http://cdn.images.eighthloop.com/home-icon.png" alt="Home Icon"></a> <img class="shadow" src="http://cdn.images.eighthloop.com/shadow.png" alt="shadow"> <a href="front-page" class="more">Home</a>
+                        </div>
+
+                        <div class="item">
+                            <a href="/home"><img class="image" src="http://cdn.images.eighthloop.com/articles-icon.png" alt="Articles Icon"></a> <img class="shadow" src="http://cdn.images.eighthloop.com/shadow.png" alt="shadow"> <a href="/home" class="more">Articles</a>
+                        </div>
+
+                        <div class="item">
+                            <a href="/contact"><img class="image" src="http://cdn.images.eighthloop.com/mail-icon.png" alt="Contact Icon"></a> <img class="shadow" src="http://cdn.images.eighthloop.com/shadow.png" alt="shadow"> <a href="/contact" class="more">Contact</a>
+                        </div>
+                    </div><!--end hiphop-->
+                </nav>
+            </header>
+        </div><!--  !end header row  -->
