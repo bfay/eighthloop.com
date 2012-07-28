@@ -23,7 +23,7 @@ GENERAL STYLES
 
   * { @include box-sizing(border-box); }
   html { font-size: 62.5%; }
-  body { @include mybackground; @include defaultFontFamily; @include font-size(16); line-height: 1; color: $txtColor; position: relative; -webkit-font-smoothing: antialiased; }  
+  body { @include background; @include defaultFontFamily; @include font-size(16); line-height: 1; color: $txtColor; position: relative; -webkit-font-smoothing: antialiased; }  
   
 /* -----------------------------------------
    Shared Styles
