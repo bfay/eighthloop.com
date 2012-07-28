@@ -1,5 +1,5 @@
 require 'zurb-foundation'
-require '/Library/Ruby/Gems/1.8/gems/zurb-foundation-3.0.5/lib/zurb-foundation.rb'
+require '/Library/Ruby/Gems/1.8/gems/zurb-foundation-3.0.6/lib/zurb-foundation.rb'
 require 'modular-scale'
 # Require any additional compass plugins here.
 

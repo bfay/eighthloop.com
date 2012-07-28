@@ -117,7 +117,7 @@ function bones_scripts_and_styles() {
     wp_register_script( 'bones-modernizr', 'http://cdn.scripts.eighthloop.com/modernizr.2.6.1.js');
  
     // register main stylesheet
-    wp_register_style( 'bones-stylesheet', 'http://maxcdn.eighthloop.com/wp-content/themes/dissident/library/foundation_3/css/foundation.css', array(), '', 'all' );
+    wp_register_style( 'bones-stylesheet', 'http://maxcdn.eighthloop.com/wp-content/themes/dissident/library/css/foundation.css');
 
     // ie-only style sheet
     wp_register_style( 'bones-ie-only', 'http://maxcdn.eighthloop.com/wp-content/themes/dissident/library/css/ie.css', array(), '' );
