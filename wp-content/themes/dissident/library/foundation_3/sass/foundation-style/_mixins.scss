@@ -27,6 +27,13 @@
 	border-right-width: 3px;
 	border-right-style: groove;
 }
+
+@mixin border-clear {
+	border-width: thick;
+	border-color: rgba(0,0,0,0.1);
+	border-style: groove;
+
+}
 	  
   // Grid Calculation for Percentages
 

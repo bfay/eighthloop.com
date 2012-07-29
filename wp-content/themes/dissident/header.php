@@ -28,35 +28,39 @@
 		<!-- end of wordpress head -->
 			
 		<!-- drop Google Analytics Here -->
+		<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-33695808-1']);
+  _gaq.push(['_setDomainName', 'eighthloop.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 		<!-- end analytics -->
+	
 		
 	</head>
 	
 	<body <?php body_class(); ?>>
 	
-    <!-- Start the main container -->
+		<div id="container">
+			
+			<header class="header row" role="banner">
+			
 
-    <div id="container" class="container" role="document">
-        <div class="row">
-            <header class="twelve columns main-nav" role="navigation">
-                <!-- Row for blog navigation -->
+			
+			<a href="<?php echo home_url(); ?>" class="logo three columns" rel="nofollow"><img src="http://cdn.images.eighthloop.com/eighthloop-logo.png" alt="Eighth Loop Logo"></a>
+					
+			<nav class="eight columns push-one" role="navigation">		
+			<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+			</nav>
+			
+			</header> <!-- end header -->
 
-                <div class="initials left"><img src="http://cdn.images.eighthloop.com/eighthloop-logo.png" alt="Byron Fay Initials"></div>
-
-                <nav class="nav-bar right" role="navigation">
-                    <div class="hiphop jump dim centered">
-                        <div class="item">
-                            <a href="front-page"><img class="image" src="http://cdn.images.eighthloop.com/home-icon.png" alt="Home Icon"></a> <img class="shadow" src="http://cdn.images.eighthloop.com/shadow.png" alt="shadow"> <a href="front-page" class="more">Home</a>
-                        </div>
-
-                        <div class="item">
-                            <a href="/home"><img class="image" src="http://cdn.images.eighthloop.com/articles-icon.png" alt="Articles Icon"></a> <img class="shadow" src="http://cdn.images.eighthloop.com/shadow.png" alt="shadow"> <a href="/home" class="more">Articles</a>
-                        </div>
-
-                        <div class="item">
-                            <a href="/contact"><img class="image" src="http://cdn.images.eighthloop.com/mail-icon.png" alt="Contact Icon"></a> <img class="shadow" src="http://cdn.images.eighthloop.com/shadow.png" alt="shadow"> <a href="/contact" class="more">Contact</a>
-                        </div>
-                    </div><!--end hiphop-->
-                </nav>
-            </header>
-        </div><!--  !end header row  -->
+	

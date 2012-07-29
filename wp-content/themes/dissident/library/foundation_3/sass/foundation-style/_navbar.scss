@@ -1,6 +1,11 @@
 /* Requires
    globals.css */
 
+  
+  .logo {
+	padding: 20px 0px 0px 2%;
+	overflow: visible;
+}
   .main-nav {background: linear-gradient(lighten($cream, 10%), $cream)}
   .nav-bar { height: $navBarHeight; margin-top: $navBarHeight / 8; padding: 0;
 

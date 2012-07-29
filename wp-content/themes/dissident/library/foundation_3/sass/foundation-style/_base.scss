@@ -34,28 +34,9 @@ GENERAL STYLES
 		color: $mainColor; }
 	
 	/* Add Divider for Listed Posts */
-	.divider { background:url(http://cdn.images.eighthloop.com/divider.png) no-repeat center top; height:60px; margin:20px 0 20px 0; }
+	.divider { background:url(http://cdn.images.eighthloop.com/divider.png) no-repeat center top; height:30px; margin:15px 0 15px 0; }
 
-
-/* -----------------------------------------
-   Navigation menu
------------------------------------------ */
-
-
-.main-nav {
-	 /*@include background-image(linear-gradient(lighten($ninblack, 85%), lighten($ninblack, 75%)));*/
-	 height: $navBarHeight; margin-top: 10px; overflow: visible;
-}
-  .nav-bar {margin-top: 5px; padding: 0; text-decoration: none; overflow: visible;
-
-  }
-.initials {
-	padding: 10px 0px 0px 60px;
-	overflow: visible;
-}
- 
-.logo {padding: 20px 0px 0px 5px}
-
+	
 .light {
 	background-color: rgba(255,255,255,0.33);
 	margin-bottom: 30px;
@@ -65,10 +46,6 @@ GENERAL STYLES
 	@include border-sides
 } 
 
-.nav_image {
-height: 40px;
-	
-} 
 
 /* Links ---------------------- */
 
@@ -143,6 +120,7 @@ LAYOUT & GRID STYLES
 .wrap {
 	width: 95%;
 	margin: 0 auto;
+	
 }
 
 /*
@@ -250,8 +228,15 @@ and moe scalable.
 POSTS & CONTENT STYLES
 *********************/
 
+.content-container {
+	margin: 0 auto;
+	background-color: white;
+	@include border-clear;
+}
+
 #content {
 	margin-top: 2.2em;
+	
 }
 
 		.hentry {
