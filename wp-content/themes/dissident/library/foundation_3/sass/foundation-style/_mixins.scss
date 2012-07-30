@@ -45,9 +45,11 @@
 
   @mixin defaultFontFamily {
     font-family: "proxima-nova", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: $ninblack;
   }
   @mixin secondFontFamily {
-	  font-family: "calluna", serif,;
+	  font-family: "calluna", serif;
+	  color: $ninblack;
   }
 
   // Create CSS Triangles in a Breeze

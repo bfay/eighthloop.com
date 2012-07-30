@@ -140,7 +140,7 @@ function bones_scripts_and_styles() {
     and your site will load faster.  Which is what I did here
     */
     wp_deregister_script( 'jquery' );
-    wp_register_script( 'jquery', 'http://code.jquery.com/jquery-1.7.1.min.js');
+    wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
     wp_enqueue_script( 'jquery' );
 
     wp_enqueue_script( 'jquery' ); 
@@ -168,7 +168,7 @@ function bones_theme_support() {
 	add_theme_support('post-thumbnails');   
 	
 	// default thumb size   
-	set_post_thumbnail_size(125, 125, true);   
+	set_post_thumbnail_size(150, 150, true);   
 	
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',

@@ -2,12 +2,11 @@
 Site Name: 
 Author: 
 
-Stylesheet: Main Stylesheet
+CSS: Main Stylesheet
 
 Here's where the magic happens. Here, you'll see we are calling in
-the separate media queries. The base mobile goes outside any query
-and is called at the beginning, after that we call the rest
-of the styles inside media queries.
+the separate media queries throughout. Unlike in "Bones theme" where the base mobile goes outside any query
+and is called at the beginning, we are engineering our pages to scale back as sizes decrease.  Sorry Andy Clarke, but my thought process is not to work from a base-up.  It is easier to scale back.  Yes, I know the CSS gets redundant and could be optimized, but in my experiments, it saved less than .05 seconds in load time...yet it saves a day or two in development time per client my way.  
 ******************************************************************/
 
 
@@ -42,63 +41,24 @@ in general anyone not viewing on a mobile device. Here's where
 you can add resource intensive styles.
 */
 
-// styles in base.scss 
+// styles in base.scss and the normal grid
 @import "foundation-style/base";
+@import "foundation-style/grid";
 
-//fancy stylings from Zurb:)
-@import "foundation-style/offcanvas";
+/*fancy stylings from Zurb:)
+@import "foundation-style/offcanvas";*/
 
-/*
-LARGER MOBILE DEVICES
-This is for devices like the Galaxy Note or something that's 
-larger than an iPhone but smaller than a tablet. Let's call them
-tweeners.
-*/
-@media only screen and (min-width: 481px) {
-	
-	// styles in 481up.scss
-	@import "foundation-style/481up";
 
-} // end of media query
+//final styling elements with dependencies
+@import "foundation-style/ui";
+@import "foundation-style/tabs";
+@import "foundation-style/buttons";
+@import "foundation-style/navbar";
+@import "foundation-style/forms";
 
-/*
-TABLET & SMALLER LAPTOPS
-This is the average viewing window. So Desktops, Laptops, and 
-in general anyone not viewing on a mobile device. Here's where
-you can add resource intensive styles.
-*/
-@media only screen and (min-width: 768px) {
-	
-	//finally!  Some fun with the grid!
-	// styles in 768up.scss
-	@import "foundation-style/768up";
-	@import "foundation-style/grid";
+//Custom settings loaded last as a "catch-all"
+@import "foundation-style/custom";
 
-} // end of media query
-
-/*
-DESKTOP 
-This is the average viewing window. So Desktops, Laptops, and 
-in general anyone not viewing on a mobile device. Here's where
-you can add resource intensive styles.
-*/
-@media only screen and (min-width: 1030px) {
-	
-	// styles in 1030up.scss 
-	@import "foundation-style/1030up";
-
-} // end of media query
-
-/*
-LARGE VIEWING SIZE 
-This is for the larger monitors and possibly full screen viewers.
-*/
-@media only screen and (min-width: 1240px) {
-	
-	// styles in 1240up.scss
-	@import "foundation-style/1240up";
-
-} // end of media query
 
 /*
 RETINA (2x RESOLUTION DEVICES)

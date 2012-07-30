@@ -1,13 +1,16 @@
+<?php
+/*
+Template Name: Front Page
+*/
+?>
 <?php get_header(); ?>
-		<div class="main-content">	
 			
-			<div id="content" class="row">
 			
-				<div class="eleven columns centered">
+			<div id="content" class="main-content">
 			
-				<div id="inner-content">
+				<div id="inner-content" class="wrap eleven columns centered">
 			
-				    <div id="main" class="nine columns" role="main">
+				    <div id="main" class="eight columns" role="main">
 
 					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
@@ -71,10 +74,7 @@
 				    <?php get_sidebar(); // sidebar 1 ?>
 				    
 				</div> <!-- end #inner-content -->
-				
-				</div> <!-- end columns -->
     
 			</div> <!-- end #content -->
-		</div><!-- end wrap -->
 
 <?php get_footer(); ?>

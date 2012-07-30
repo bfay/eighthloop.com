@@ -55,7 +55,7 @@
 			
 
 			
-			<a href="<?php echo home_url(); ?>" class="logo three columns" rel="nofollow"><img src="http://cdn.images.eighthloop.com/eighthloop-logo.png" alt="Eighth Loop Logo"></a>
+			<a href="<?php echo home_url(); ?>" class="logo three columns" rel="nofollow"><img src="http://cdn.images.eighthloop.com/eighthloop-logo.png" alt="Eighth Loop Logo"><h3>A work in progress</h3></a>
 					
 			<nav class="eight columns push-one" role="navigation">		
 			<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
