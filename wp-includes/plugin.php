@@ -177,6 +177,7 @@ function apply_filters($tag, $value) {
 	return $value;
 }
 
+
 /**
  * Execute functions hooked on a specific filter hook, specifying arguments in an array.
  *
