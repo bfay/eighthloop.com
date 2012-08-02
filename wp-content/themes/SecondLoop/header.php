@@ -50,7 +50,7 @@
 					<a href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><img src="http://cdn.images.eighthloop.com/eighthloop-logo.png"></a>
 					
 				</div>
-				<nav class="seven columns push-one" role="navigation">
+				<nav class="nav-bar seven columns push-one" role="navigation">
 					<?php
 					    wp_nav_menu( array(
 						'theme_location' => 'primary_navigation',

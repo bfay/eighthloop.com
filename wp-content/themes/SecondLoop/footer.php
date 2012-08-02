@@ -6,15 +6,20 @@
 			</div>
 			<div class="row">
 				<div class="four columns">
-					&copy; 2008-<?php echo date('Y'); ?> All rights reserved.
+					&copy; 2007-<?php echo date('Y'); ?> Eighth Loop
 					<br>
-					Powered by <a href="http://themefortress.com/secondloop/" title="secondloop Framework">secondloop Framework</a>.
+					All rights reserved.
 				</div>
-				<?php wp_nav_menu(array('theme_location' => 'utility_navigation', 'container' => false, 'menu_class' => 'eight columns footer-nav')); ?>
+				<div class="four columns">
+					<img src="http://cdn.images.eighthloop.com/loop-logo-100.png" alt="Small Eighth Loop Logo">
+				</div>
+				<div class="four columns">
+						<p>Developed by <a href="http://www.byronfay.com" title="secondloop Framework">Byron Fay</a>.</p>
+				</div>
 			</div>
-		</footer>
-			
-	</div><!-- Container End -->
+		</footer>	
+		
+		</div><!-- Container End -->
 	
 	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
 	     chromium.org/developers/how-tos/chrome-frame-getting-started -->

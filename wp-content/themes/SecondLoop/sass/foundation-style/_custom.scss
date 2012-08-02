@@ -27,13 +27,9 @@ width: 100%;
    Customized Adjustments of Foundation for WordPress
 --------------------------------------------------- */
  
-	/* Foundation-specific presentation CSS by ZURB */
-	div.secondloop-header { margin: 0 0 20px 0; padding: 20px 0 0 0; border-bottom: solid 1px #ccc; }
-	div.secondloop-header h1 { font-weight: 500; margin-bottom: 0; padding: 0; }
-	div.secondloop-header h1 a { color: #181818; }
-	div.secondloop-header h1 a:hover { color: #181818; }
+
 	
-	@media handheld, only screen and (max-width: 767px) {
+	@media handheld, only screen and (max-width: 480px) {
 	header { position: relative; }
 	header .subheader { margin-bottom: 0; }
 	header .menu-action { float: left; position: relative; top: 1px; margin-top: -12px; }

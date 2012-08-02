@@ -18,7 +18,7 @@
       }
       &:hover { background: lighten($darkdarkbrown, 10%); }
 
-      a { color: darken($white, 10%); }
+      a { color: $mainColor; }
       ul { margin-bottom: 0; }
       .flyout { display: none; }
 
@@ -67,7 +67,7 @@
   ul.flyout, .nav-bar li ul { padding: 0; list-style: none;
 
     li { border-left: solid 3px #CCC;
-      a { background: darken($white, 5%); border: 1px solid darken($white, 10%); border-width: 1px 1px 0 0; color: #555; display: block; font-size: ms(0); height: auto; line-height: 1; padding: 15px 20px; @include box-shadow(0 1px 0 $shinyEdge inset);
+      a { color: $mainColor; border: 1px solid darken($white, 10%); border-width: 1px 1px 0 0; color: #555; display: block; text-align: center;font-size: ms(0); height: auto; line-height: 1; padding: 15px 20px; @include box-shadow(0 1px 0 $shinyEdge inset);
         &:hover { background: darken($white, 8%); color: #333; }
       }
       &.active { margin-top: 0; border-top: 1px solid lighten($black, 30%); border-left: 4px solid lighten($black, 10%);
@@ -84,16 +84,16 @@
   }
 
   @media only screen and (max-width: $screenMedium) and (min-width: $screenSmall) {
-    .touch .nav-bar li a { @include font-size(13); }
+    .touch .nav-bar li a { @include font-size(16); text-align: center; }
     .touch .nav-bar li.has-flyout>a.flyout-toggle { padding: 20px !important; }
     .touch .nav-bar li.has-flyout>a { padding-right: 36px !important; }
   }
 
   @media only screen and (max-width: $screenSmall - 1) {
-    .nav-bar { height: auto;
+    .nav-bar { height: auto; text-align: center;
 
-      &>li { float: none; display: block; border-right: none; }
-      &>li>a.main { text-align: left; border-top: 1px solid #ddd; border-right: none; }
+      &>li { float: none; display: block; border-right: none; text-align: center;}
+      &>li>a.main { text-align: center; border-top: 2px groove $ninblack; border-right: none; }
       &>li:first-child>a.main { border-top: none; }
       &>li.has-flyout>a.flyout-toggle { position: absolute; right: 0; top: 0; padding: 22px; z-index: 2; display: block; }
       &>li.has-flyout.is-touch>a.flyout-toggle span { content: ""; width: 0; height: 0; display: block; }
