@@ -24,7 +24,6 @@
 	
 	<meta name="keywords" content="foundation rapid prototyping, zurb foundation 3, design, frameworks, wordpress framework, css framework, html framework, html5, css3 transitions, css3, SASS, SCSS, compass, responsive design, hybrid responsive web design, RWD, HRWD, modernizr, categorizr, selectivizr, how to build a website, CodeKit, Coda 2, web developer, barberton ohio, north canton ohio, akron ohio, cleveland ohio, northeast ohio, web design barberton ohio, web design norton ohio, web design canton ohio, ">
 	<meta name="author" content="Byron Fay">
-	<meta name="Copyright" content="©Byron Fay 2007-2012. All Rights Reserved.">
 
 	<!-- Dublin Core Metadata : http://dublincore.org/ -->
 	<meta name="DC.title" content="Learning to Build a Hybrid Responsive Website Design (HRWD)">
@@ -53,8 +52,6 @@
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/images/iphone_load.png" media="screen and (max-device-width: 320px)" />
 	 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 	
-<?php wp_head(); ?>
-
 				<!-- drop Google Analytics Here -->
 		<script type="text/javascript">
 
@@ -72,10 +69,11 @@
 </script>
 		<!-- end analytics -->
 
+<?php wp_head(); ?>
 
 </head>
 
-<body <?php body_class(); ?>>
+<body>
 	
 	<!-- Start the main container -->	
 	

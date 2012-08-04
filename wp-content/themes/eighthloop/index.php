@@ -7,7 +7,6 @@
 				<?php get_template_part('loop', 'index'); ?>
 			</div>
 			
-			<div class="divider"> <img src="http://8images.eighthloop.com/divider.png"></div>
 
 		</div><!-- End Content row -->
 		

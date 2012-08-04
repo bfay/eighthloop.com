@@ -24,7 +24,7 @@ add_action('after_setup_theme', 'eighthloop_setup');
 function eighthloop_css() {
   if ( !is_admin() ) {
   
-     wp_register_style( 'foundation','http://www.eighthloop.com/wp-content/themes/eighthloop/css/foundation.css', false );
+     wp_register_style( 'foundation',get_template_directory_uri() . '/css/foundation.css', false );
      wp_enqueue_style( 'foundation' );
 
      
@@ -37,7 +37,7 @@ add_action( 'init', 'eighthloop_css' );
 
 function eighthloop_ie_css () {
     echo '<!--[if lt IE 9]>';
-    echo '<link rel="stylesheet" href="http://maxcdn.eighthloop.com/css/ie.css">';
+    echo '<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ie.css">';
     echo '<![endif]-->';
 }
 add_action( 'wp_head', 'eighthloop_ie_css' );
