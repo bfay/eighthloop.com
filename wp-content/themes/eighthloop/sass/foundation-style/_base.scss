@@ -23,7 +23,7 @@ GENERAL STYLES
 
   * { @include box-sizing(border-box); }
   html { font-size: 62.5%; }
-  body { @include background; @include defaultFontFamily; position: relative; -webkit-font-smoothing: antialiased; }  
+  body { @include background; @include defaultFontFamily; position: relative; -webkit-font-smoothing: antialiased; font-size: ms(0) }  
   
 /* -----------------------------------------
    Shared Styles

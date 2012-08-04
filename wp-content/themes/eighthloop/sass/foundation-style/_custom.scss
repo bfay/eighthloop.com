@@ -1,50 +1,15 @@
-#body { @include background }
-
-.brand {
-max-width: 276px;
-width: 100%;
-}
-
-.container {width: 95%;
-	background-color: $white;
-	margin: 0 auto;
-	@include border-clear;
-	border-top: $white;
-	padding: 15px 0 15px 0;
-}
-
-.sidebar {width: 75%;}
 
 /* -------------------------------------------------- 
    Table of Contents
 -----------------------------------------------------
-:: Customized Adjustments of Foundation for WordPress
-:: Styling Basic WordPress Outputs
+
+:: Styling Basic WordPress Images
 :: Customize Foundation Style Pagination for WP-Pagenavi
 :: Customize for BuddyPress
-:: Your Customized Style
+
 */
 
-/* ---------------------------------------------------
-   Customized Adjustments of Foundation for WordPress
---------------------------------------------------- */
- 
 
-	
-	@media handheld, only screen and (max-width: 480px) {
-	header { position: relative; }
-	header .subheader { margin-bottom: 0; }
-	header .menu-action { float: left; position: relative; top: 1px; margin-top: -12px; }
-	header .menu-action .button.small { padding: 8px; }
-	header .menu-action .button.small svg { opacity: 0.5; }
-	header h1 { font-size: 27px; font-size: 2.7rem; margin-bottom: 18px; }
-	header h4 { font-size: 17px; font-size: 1.7rem; }
-	}
-
-/* -----------------------------------------
-   Styling Basic WordPress Outputs
------------------------------------------ */
-	
 
 	
 	/* Add HTML5 Class for Images */
@@ -73,6 +38,26 @@ width: 100%;
     ul.page-numbers li.unavailable:hover a,ul.page-numbers li.unavailable a:focus { background: transparent; }
     ul.page-numbers li span.current { background: #2ba6cb; color: #fff; font-weight: bold; cursor: default; display: block; padding: 1px 7px 1px; } 
     
-    
-    
+
+/*  -------------------------------------------------------
+    My Custom Styles to be applied last just in case
+    ---------------------------------------------------- */ 
+ 
+
+.brand {
+max-width: 276px;
+width: 100%;
+}
+
+.logo {max-width: 100px;
+	width: 100%;
+}
+
+.container {width: 95%;
+	background-color: $white;
+	margin: 0 auto;
+	@include border-clear;
+	border-top: $white;
+	padding: 15px 0 15px 0;
+}   
    

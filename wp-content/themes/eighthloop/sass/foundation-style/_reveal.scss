@@ -12,7 +12,7 @@
     *:first-child { margin-top: 0; }
     *:last-child { margin-bottom: 0; }
     .close-reveal-modal {
-      @include font-size(22);
+      font-size: ms(4);
       line-height: .5;
       position: absolute;
       top: 8px;

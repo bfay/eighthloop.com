@@ -84,7 +84,7 @@
   }
 
   @media only screen and (max-width: $screenMedium) and (min-width: $screenSmall) {
-    .touch .nav-bar li a { @include font-size(16); text-align: center; }
+    .touch .nav-bar li a {font-size: ms(0); text-align: center; }
     .touch .nav-bar li.has-flyout>a.flyout-toggle { padding: 20px !important; }
     .touch .nav-bar li.has-flyout>a { padding-right: 36px !important; }
   }

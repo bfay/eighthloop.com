@@ -172,7 +172,7 @@
 
   }
 
-  .tooltip { display: none; background: rgb(0,0,0); background: rgba(0,0,0,0.8); position: absolute; color: #fff; font-weight: bold; @include font-size(12); padding: 5px; z-index: 999; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; line-height: normal;
+  .tooltip { display: none; background: rgb(0,0,0); background: rgba(0,0,0,0.8); position: absolute; color: #fff; font-weight: bold; font-size: ms(0) -1; padding: 5px; z-index: 999; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; line-height: normal;
 
     &>.nub { display: block; width: 0; height: 0; border: solid 5px; border-color: transparent transparent rgb(0,0,0) transparent; border-color: transparent transparent rgba(0,0,0,0.8) transparent; position: absolute; top: -10px; left: 10px; }
     &.tip-override>.nub { border-color: transparent transparent rgb(0,0,0) transparent !important; border-color: transparent transparent rgba(0,0,0,0.8) transparent !important; top: -10px !important; }
@@ -188,11 +188,11 @@
 
   }
 
-  .tap-to-close { display: block; @include font-size(10); color: #888; font-weight: normal; }
+  .tap-to-close { display: block; font-size: ms(0)-1; color: #888; font-weight: normal; }
 
   @media only screen and (max-width: $screenSmall - 1) {
     .tooltip {
-      @include font-size(14);
+      font-size: ms(0);
       line-height: 1.4;
       padding: 7px 10px 9px 10px;
     }
@@ -254,7 +254,7 @@
 
     li { margin: 0; padding: 0 12px 0 0; float: left; list-style: none;
 
-      a, span { text-transform: uppercase; @include font-size(11); padding-left: 12px; }
+      a, span { text-transform: uppercase; font-size: ms(0)-2; padding-left: 12px; }
       &:first-child a, &:first-child span { padding-left: 0; }
     }
 
@@ -307,9 +307,9 @@
   table tfoot tr th,
   table tbody tr td,
   table tr td,
-  table tfoot tr td { @include font-size(12); line-height: 18px; text-align: left; }
+  table tfoot tr td { font-size: ms(0)-1; line-height: 18px; text-align: left; }
   table thead tr th,
-  table tfoot tr td { padding: 8px 10px 9px; @include font-size(14); font-weight: bold; color: #222; }
+  table tfoot tr td { padding: 8px 10px 9px; font-size: ms(0); font-weight: bold; color: #222; }
   table thead tr th:first-child, table tfoot tr td:first-child { border-left: none; }
   table thead tr th:last-child, table tfoot tr td:last-child { border-right: none; }
 
@@ -323,7 +323,7 @@
   ul.vcard { display: inline-block; margin: 0 0 12px 0; border: 1px solid #ddd; padding: 10px;
 
     li { margin: 0; display: block; }
-    li.fn { font-weight: bold; @include font-size(15); }
+    li.fn { font-weight: bold; font-size: ms(0); }
 
   }
 
