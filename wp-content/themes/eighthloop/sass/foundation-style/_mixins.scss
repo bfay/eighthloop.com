@@ -12,7 +12,7 @@
   
   //Background mixin
   @mixin background {
-	  background-image: #f9f8f8;
+	  background-image: #515151;
   }
   
   //Border mixins
@@ -20,11 +20,11 @@
 	@include border-left-radius(25px);
 	@include border-right-radius(25px);
 	border-left-color: lighten($ninblack, 90%);
-	border-left-width: 3px;
-	border-left-style: groove;
+	border-left-width: 5px;
+	border-left-style: solid;
 	border-right-color: lighten($ninblack, 90%);
-	border-right-width: 3px;
-	border-right-style: groove;
+	border-right-width: 2px;
+	border-right-style: solid;
 }
 
 @mixin border-clear {

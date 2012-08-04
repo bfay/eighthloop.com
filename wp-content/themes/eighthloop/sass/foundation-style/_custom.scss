@@ -13,6 +13,8 @@ width: 100%;
 	padding: 15px 0 15px 0;
 }
 
+.sidebar {width: 75%;}
+
 /* -------------------------------------------------- 
    Table of Contents
 -----------------------------------------------------
@@ -57,25 +59,7 @@ width: 100%;
 	border-image: initial;
 	}
 	
-	/* Add HTML5 Caption Class for Images */
-	figure.figure {	margin: 0 auto;	-webkit-border-radius: 3px;	-moz-border-radius: 3px; display: inline-block; }
-	figure.figure figcaption { padding: 8px 10px; font-size: 13px; font-size: 1.3rem; line-height: 18px; color: #555; }
-	figure.alignright.figure { float: right; margin: 0 0 18px 18px; }
-	figure.alignleft.figure { float: left; margin: 0 18px 18px 0; }
-	
-	/* Sidebar Adjustment */
-	.sidebar-section { padding-bottom: 10px; padding-top: 20px;	font-size: 13px; font-size: 1.3rem; font-weight: normal; }
-	
-	/* Footer Nav */
-	.footer-section { padding-bottom: 10px; padding-top: 20px; font-size: 13px; font-size: 1.3rem; font-weight: normal; }
-	.footer-nav li { display: block; float: right; padding-left: 3%; margin-bottom: 0; }
-	
-	/* Breadcrumb Adjustment */
-	ul.breadcrumbs li span { padding-left: 3px; }
-	ul.breadcrumbs li a { padding-left: 0; }
-	
-	/* Comment Textarea Adjustment */
-	#respond textarea { height: 100px; }	
+
 
 /*  -------------------------------------------------------
     Adjust Foundation 3 Pagination Style for WordPress

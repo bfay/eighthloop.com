@@ -1,5 +1,5 @@
-<aside id="sidebar" class="four columns" role="complementary">
-	<div class="sidebar-box">
+<aside id="sidebar" class="four columns sideborders" role="complementary">
+	<div class="right_sidebar">
 		<?php dynamic_sidebar("Sidebar"); ?>
 	</div>
 </aside><!-- /#sidebar -->

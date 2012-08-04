@@ -6,6 +6,7 @@
 			<div class="post-box">
 				<?php get_template_part('loop', 'page'); ?>
 			</div>
+			<div class="divider"></div>
 
 		</div><!-- End Content row -->
 		
