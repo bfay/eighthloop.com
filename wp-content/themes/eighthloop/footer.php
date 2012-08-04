@@ -10,12 +10,6 @@
                 &copy; Byron Fay 2007-<?php echo date('Y'); ?> All rights reserved.<br>
                 Powered by <a href="http://www.byronfay.com/eighthloop-framework/" rel="nofollow" title="eighthloop Framework">Eighthloop Framework</a>.
             </div>
-
-            <div class="four columns">.
-                
-            </div>
-
-            <div class="four columns">.</div>
         </div>
     </footer><!-- Container End -->
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
