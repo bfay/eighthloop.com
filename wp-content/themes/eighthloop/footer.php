@@ -11,11 +11,11 @@
                 Powered by <a href="http://www.byronfay.com/eighthloop-framework/" rel="nofollow" title="eighthloop Framework">Eighthloop Framework</a>.
             </div>
 
-            <div class="four columns">
-                <a href="http://www.eighthloop.com" class="logo" alt="Eighth Loop Logo"><img src="http://8images.eighthloop.com/loop-logo-100.png"></a>
+            <div class="four columns">.
+                
             </div>
 
-            <div class="four columns"></div>
+            <div class="four columns">.</div>
         </div>
     </footer><!-- Container End -->
     <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
