@@ -82,26 +82,16 @@
 		<!-- Row for blog navigation -->
 		<div class="row">
 			<header class="twelve columns" role="banner">
+				<div class="">
+					
+				</div>
+				
 				<div class="four columns brand">
 					<a href="http://www.eighthloop.com"><img src="http://8images.eighthloop.com/eighthloop-logo.png" alt="Eighth Loop Logo"></a>
 					
 				</div>
-				<nav class="nav-bar seven columns push-one" role="navigation">
-					<?php
-					    wp_nav_menu( array(
-						'theme_location' => 'primary_navigation',
-						'container' =>false,
-						'menu_class' => '',
-						'echo' => true,
-						'before' => '',
-						'after' => '',
-						'link_before' => '',
-						'link_after' => '',
-						'depth' => 0,
-						'items_wrap' => '<ul class="nav-bar">%3$s</ul>',
-						'walker' => new eighthloop_walker())
-					); ?>
-				</nav>
+				
+				
 			</header>
 		</div>
 		
