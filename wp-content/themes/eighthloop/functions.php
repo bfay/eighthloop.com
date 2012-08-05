@@ -24,7 +24,7 @@ add_action('after_setup_theme', 'eighthloop_setup');
 function eighthloop_css() {
   if ( !is_admin() ) {
   
-     wp_register_style( 'foundation',get_template_directory_uri() . '/css/foundation.css', false );
+     wp_register_style( 'foundation','http://8css.eighthloop.com/foundation.css', false );
      wp_enqueue_style( 'foundation' );
 
      
@@ -37,7 +37,7 @@ add_action( 'init', 'eighthloop_css' );
 
 function eighthloop_ie_css () {
     echo '<!--[if lt IE 9]>';
-    echo '<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/ie.css">';
+    echo '<link rel="stylesheet" href="8css.eighthloop.com/ie.css">';
     echo '<![endif]-->';
 }
 add_action( 'wp_head', 'eighthloop_ie_css' );
@@ -51,27 +51,27 @@ global $is_IE;
   
   // Enqueue to header
      wp_deregister_script( 'jquery' );
-     wp_register_script( 'jquery', 'http://8scripts.eighthloop.com/js/jquery.min.js' );
+     wp_register_script( 'jquery', 'http://8scripts.eighthloop.com/jquery.min.js' );
      wp_enqueue_script( 'jquery' );
      
-     wp_register_script( 'modernizr', 'http://8scripts.eighthloop.com/js/modernizr.foundation.js', array( 'jquery' ) );
+     wp_register_script( 'modernizr', 'http://8scripts.eighthloop.com/modernizr.foundation.js', array( 'jquery' ) );
      wp_enqueue_script( 'modernizr' );
  
   // Enqueue to footer
-     wp_register_script( 'reveal','http://8scripts.eighthloop.com/js/jquery.reveal.js', array( 'jquery' ), false, true );
+     wp_register_script( 'reveal','http://8scripts.eighthloop.com/jquery.reveal.js', array( 'jquery' ), false, true );
      wp_enqueue_script( 'reveal' );
      
      
-     wp_register_script( 'custom_forms', 'http://8scripts.eighthloop.com/js/jquery.customforms.js', array( 'jquery' ), false, true );
+     wp_register_script( 'custom_forms', 'http://8scripts.eighthloop.com/jquery.customforms.js', array( 'jquery' ), false, true );
      wp_enqueue_script( 'custom_forms' );
      
-     wp_register_script( 'placeholder', 'http://8scripts.eighthloop.com/js/jquery.placeholder.min.js', array( 'jquery' ), false, true );
+     wp_register_script( 'placeholder', 'http://8scripts.eighthloop.com/jquery.placeholder.min.js', array( 'jquery' ), false, true );
      wp_enqueue_script( 'placeholder' );
      
-     wp_register_script( 'tooltips', 'http://8scripts.eighthloop.com/js/jquery.tooltips.js', array( 'jquery' ), false, true );
+     wp_register_script( 'tooltips', 'http://8scripts.eighthloop.com/jquery.tooltips.js', array( 'jquery' ), false, true );
      wp_enqueue_script( 'tooltips' );
      
-     wp_register_script( 'app', 'http://8scripts.eighthloop.com/js/app.js', array( 'jquery' ), false, true );
+     wp_register_script( 'app', 'http://8scripts.eighthloop.com/app.js', array( 'jquery' ), false, true );
      wp_enqueue_script( 'app' );
      
     
