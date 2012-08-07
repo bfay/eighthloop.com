@@ -82,14 +82,35 @@
 		<!-- Row for blog navigation -->
 		<div class="row">
 			<header class="twelve columns" role="banner">
-				<div class="">
-					
-				</div>
-				
 				<div class="four columns brand">
 					<a href="http://www.eighthloop.com"><img src="http://8images.eighthloop.com/eighthloop-logo.png" alt="Eighth Loop Logo"></a>
-					
 				</div>
+			
+<div class="dimmer dim">
+				
+  <div class="item">
+    <h5>Introduction</h5>
+    <a href="#" class="more">Who we are</a>
+  </div>
+
+  <div class="item">
+    <h5>Services</h5>
+    <a href="#" class="more">What we do</a>
+  </div>
+
+  <div class="item">
+    <h5>Philosophy</h5>
+    <a href="#" class="more">How we do it</a>
+  </div>
+ 
+  <div class="item">
+    <h5>Journal</h5>
+    <a href="#" class="more">What we think</a>
+  </div>
+
+
+</div>
+<br clear="all">
 				
 				
 			</header>

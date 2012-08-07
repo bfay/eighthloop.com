@@ -1,0 +1,60 @@
+[welcome-block]
+
+[row]
+
+[icon-column icon="black/indent_increase_icon&amp;48.png" title="Dynamic Menu"]Go Ahead, <a href="#features">Scroll The Page</a>[/icon-column]
+
+[icon-column icon="black/layers_2_icon&amp;48.png" title="Responsive Grid Layout"]Go Ahead, Resize This Page[/icon-column]
+
+[icon-column icon="black/arrow_two_head_2_icon&amp;48.png" title="Browser History"]Go Ahead, Try The Back Button[/icon-column]
+
+[/row]
+
+[separator class="between-rows"]
+
+[two-thirds-column]
+<h4>Make Use of Tabs</h4>
+Perfect to elegantly sub-categorize your content, these tabs keep full syntax standard, accessibility and natural SEO intact! The tabs are built from two list elements, take a look at the source code, it's really simple!
+
+[tabs-container]
+[tab title="Simple"]
+
+The tabs are clean and simple unordered-list markup and basic CSS.
+
+[ul class="square"]
+[li]Google Fonts[/li]
+[li]Ajax Contact Form[/li]
+[/ul]
+
+[/tab]
+[tab title="Lightweight"]
+
+The tabs are cross-browser, but don't need a ton of hacky CSS or markup.
+
+[ul class="square"]
+[li]Cross-Browser[/li]
+[li]Pageload Performance[/li]
+[/ul]
+
+[/tab]
+[tab title="Mobile"]
+
+Like everything else, the tabs work like a charm even on mobile devices.
+
+[ul class="square"]
+[li]Flexible Grid System[/li]
+[li]Gracefull Fallback[/li]
+[/ul]
+
+[/tab]
+[/tabs-container]
+<p class="add-top">The tabs are built from two list elements, take a look at the source code, it's really simple!</p>
+[/two-thirds-column]
+
+[one-third-column]
+<h4>Browser-Side Form Validation</h4>
+Forms make use of the newest HTML5 tags and has graceful fallback for old browsers.
+
+<img class="alignnone size-full wp-image-143 scale-with-grid featured" src="http://spark_wp.local/wp-content/uploads/2012/05/modern.jpg" alt="" width="320" height="187" />
+
+[/one-third-column]
