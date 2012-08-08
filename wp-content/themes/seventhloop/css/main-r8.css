@@ -776,7 +776,7 @@ html.mobile body {
     position: absolute;
     overflow-y: scroll;
 	/* -webkit-overflow-scrolling: touch; /* supported on iOS5-b2+ but not used here (.mobile fallback) */
-	top:120px;
+	top:110px;
 	left:0; 
 	bottom:0; 
 	right:0;
@@ -799,7 +799,7 @@ header {
 	position: relative;
 }
 header h1.logo {
-	margin-top: 0;
+	margin-top: 10px;
 	margin-bottom: 0;
 }
 header h1 a {
@@ -815,7 +815,7 @@ nav li {
 	list-style: none;
 	display: block;
 	float: left;
-	margin-top: -6px;
+	margin-top: -7px;
 	margin-bottom: 0;
 }
 
@@ -838,13 +838,14 @@ nav a,
 nav a:visited,
 nav a:focus {
 	display: block;
-	height: 63px;
+	height: 75px;
 	padding: 20px 20px 0 20px;
 	text-decoration: none;
 	color:#666;
 	font-weight	: 600;
-	border-top: 3px solid #000;
+	border-top: 5px solid #000;
 	margin-top: 1px;
+	margin-bottom: 1px;
 }
 nav a:hover {
 	color: red;
@@ -854,8 +855,8 @@ nav a.active,
 nav a.active:focus,
 nav li.current-menu-item a,
 nav li.current-menu-item a:focus {
-	color: #37b1ff;
-	border-top-color: #37b1ff;
+	color: #00b0e1;
+	border-top-color: #00b0e1;
 	-webkit-transition:color 0.3s ease, 
 					   border-color 0.3s ease,
 					   background-color 0.3s ease;
@@ -876,7 +877,7 @@ nav li.current-menu-item a:hover {
 }
 nav a span {
 	color: #c1c1c1;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight	: normal;
 }
 

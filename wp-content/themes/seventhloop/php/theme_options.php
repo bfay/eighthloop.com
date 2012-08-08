@@ -7,8 +7,8 @@ if (!function_exists('get_spark_options')) {
 
 		// Array of default values (used only if user-defined values are empty)
 		$spark_options_default_values = array(
-			'spark_logo' => get_bloginfo('template_url').'/images/logo.png',
-			'spark_logo_mobile' => get_bloginfo('template_url').'/images/logo-mobile.png',
+			'spark_logo' => 'http://8images.eighthloop.com/loop-logo-100.png',
+			'spark_logo_mobile' => 'http://8images.eighthloop.com/loop-logo-60.png',
 			'spark_welcome_title' => '<h1>Make it Yours</h1>',
 			'spark_welcome_text' => __('<p>Designed with the latest technologies and most advanced techniques, this one-page website loads lightning-fast!</p>
 										<p class="hide-for-mobile">The layout focus on usability, it offers enterprise-level features, design quality,

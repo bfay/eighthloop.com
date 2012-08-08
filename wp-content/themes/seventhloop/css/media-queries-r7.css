@@ -5,16 +5,16 @@
 @media only screen and (max-width: 959px) {
 
 	#main {
-		top: 67px; /* header height */
+		top: 100px; /* header height */
 	}
 	nav ul {
-		height: 40px;
+		height: 60px;
 	}
 	nav li a,
 	nav li a:visited,
 	nav li a:focus {
 		display: inline-block;
-		height: 40px;
+		height: 60px;
 		width: auto;
 		padding: 23px 15px 0 15px;		
 	}
@@ -30,7 +30,7 @@
 	header h1,
 	header h1 a,
 	header h1 a img {
-		max-height: 60px;
+		max-height: 100px;
 	}
 	.hide-for-mobile {
 		display: none;
@@ -45,7 +45,7 @@
 	.container .columns.box,
 	.container .box .column,
 	.container .box .columns {
-		width: 280px;
+		width: 380px;
 	}
 	.box.featured {
 		margin-top: 10px;
@@ -55,8 +55,8 @@
 		padding: 10px;
 	}	
 	header h1.logo.one-third.column {
-		width: 50px;
-		margin-top: 5px;
+		width: 100px;
+		margin-top: 2px;
 	}
 	header nav.menu.two-thirds.column {
 		width: 370px;
