@@ -1,679 +1,0 @@
-3.2.0.alpha.275 (Bleeding Edge)
-b2837386515d5c19d8dff076848eecc4581f0705
-o:Sass::Tree::RootNode
-:
-@linei:@template"Ö#/* Requires
-   globals.css */
-
-/********************************************************* STYLES */
-.hiphop .item {
-	width: 150px; /* The width of the items */
-	padding-top: 40px; /* The padding to the top; This value should be This value should be equal or bigger then the jump-height (see line 114 and following) */
-	padding-bottom: 20px;
-	float: left;
-}
-
-.hiphop .item:not(:first-child) {
-	padding-left: 50px; /* The distance between the items */
-}
-/******************* Styling for the Item Image */
-.hiphop .item img.image {
-	opacity: 1.0; /* The opacity of the item image when the item is not jumping or dimming */
-
-	-webkit-transition: all 1s ease-in-out;
-	-moz-transition: all 1s ease-in-out;
-	-o-transition: all 1s ease-in-out;
-	-ms-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
-
-	position: relative;
-	z-index: 999;	/* The item image should be above the item image */
-	padding-bottom: 20px; /* Some distance to the Item title */
-}
-
-/******************* Styling for the Item Shadow */
-.hiphop .item img.shadow {
-	top:-29px;	/* This is pulls up the shadow; the value normally is around 1,5 x the height of your shadow image, but depends on where you want to have the shadow */
-	opacity: 1.0; /* The opacity of the shadow when the item is not jumping or dimming */
-
-	-webkit-transition: all 1s ease-in-out;
-	-moz-transition: all 1s ease-in-out;
-	-o-transition: all 1s ease-in-out;
-	-ms-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
-
-	position: relative;
-	z-index: 33;	/* The shadow should be above the background, but below the item image */
-}
-
-/******************* Styling for the Item Heading */
-.hiphop .item h2 {
-	text-align: center; /* Centers the More-Text; If you want the text to be on the left side the value would be "left", if you want the text to be on the right side the value would be "right" */
-	opacity: 1.0; /* The opacity of the Heading when the item is not jumping or dimming */
-
-	-webkit-transition: all 1s ease-in-out;
-	-moz-transition: all 1s ease-in-out;
-	-o-transition: all 1s ease-in-out;
-	-ms-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
-}
-
-/******************* Styling for the More-Text (also could be an image) */
-.hiphop .item .more {
-	width: inherit;
-	position: absolute;
-	text-align: center; /* Centers the More-Text; If you want the text to be on the left side the value would be "left", if you want the text to be on the right side the value would be "right" */
-	opacity: 0.0; /* The More-Text is invisible until you hover the item */
-
-	-webkit-transition: opacity 1s linear;
-	-moz-transition: opacity 1s linear;
-	-o-transition: opacity 1s linear;
-	-ms-transition: opacity 1s linear;
-	transition: opacity 1s linear;
-
-	padding-bottom: 20px; /* Some padding to the bottom */
-}
-
-.hiphop .item a {color: #000000;} /* The color for the More-Text */
-		
-.hiphop .item a:hover,
-.hiphop .item a:focus,
-.hiphop .item a:active {text-decoration: none;} /* Removes the underlining of the More-Text when you hover it */
-
-/********************************************************* HOVER STYLES */
-/********************************************************* #basis:hover */
-.hiphop.dim:hover .item img.image,
-.hiphop.dim:hover .item img.shadow,
-.hiphop.dim:hover .item h2 {
-	opacity: 0.5; /* Dimming the Item-Image, the Shadow and the Heading when dimming is active and another item is selected */
-
-	-webkit-transition: all 1s ease-in-out;
-	-moz-transition: all 1s ease-in-out;
-	-o-transition: all 1s ease-in-out;
-	-ms-transition: all 1s ease-in-out;
-	transition: all 1s ease-in-out;
-}
-
-/********************************************************* .item:hover */
-.hiphop.dim .item:hover h2,
-.hiphop.dim .item:hover img.image {
-	opacity: 1.0; /* The opacity of the Item-Image and the Shadow that you are hovering should be 100%, even if the other items are dimming; Opacity: 100% = 1.0 , 0% = 0.0  */
-}
-
-.hiphop .item:hover .more {
-	opacity: 1.0; /* The More-Text should become visible when you hover an item; Opacity: 100% = 1.0 , 0% = 0.0 */
-}
-
-.hiphop.jump .item:hover img.image {
-	-webkit-transform: translate(0px,-40px); /* Moving the Item-Image upwards; translate( x-Value, y-Value ) in Pixels; Negative value means moving upwards */
-	-moz-transform: translate(0px,-40px);
-	-o-transform: translate(0px,-40px);
-	-ms-transform: translate(0px,-40px);
-	transform: translate(0px,-40px);
-}
-
-.hiphop.jump .item:hover img.shadow {
-	opacity: 0.5; /* The Shadow is dimming a bit when the item is up; Opacity: 100% = 1.0 , 0% = 0.0 */
-	-webkit-transform: scale(0.9); /* Shrink the Shadow a bit; Scale: 1.0 = 100% of the original size, 0.0 = 0% of the original size */
-	-moz-transform: scale(0.9);
-	-o-transform: scale(0.9);
-	-ms-transform: scale(0.9);
-	transform: scale(0.9);
-}
-
-
-  
-  .logo {
-	padding: 20px 0px 0px 2%;
-	overflow: visible;
-}
- 
-  
-  .nav-bar { height: $navBarHeight; margin-top: $navBarHeight / 8; padding: 0;
-
-    &>li { float: left; display: block; position: relative; text-decoration: none; padding: 0; margin: 0; line-height: $navBarHeight - 2; 
-
-      &.active { background: $white;
-        &>a { color: $white; cursor: default; }
-        &:hover { background: $mainColor; cursor: default; }
-      }
-      &:hover { background: lighten($darkdarkbrown, 10%); }
-
-      a { color: $mainColor; }
-      ul { margin-bottom: 0; }
-      .flyout { display: none; }
-
-      &.has-flyout {
-        &>a:first-child { padding-right: 36px; position: relative;
-          &:after { @include cssTriangle(4px, darken($white, 10%), top); position: absolute; right: 20px; top: 17px; }
-        }
-        &>a.flyout-toggle { border-left: 0 !important; position: absolute; right: 0; top: 0; padding: 22px; z-index: 2; display: block; }
-        &.is-touch {
-          &>a:first-child { padding-right: 55px;}
-          &>a.flyout-toggle { border-left: 1px dashed #666; }
-        }
-      }
-    }
-
-    &>li>a:first-child { position: relative; padding: 0 20px; display: block; text-decoration: none; font-size: ms(0); }
-    &>li>input { margin: 0 10px; }
-
-    &.vertical { height: auto; margin-top: 0;
-
-      &>li { float: none; border-bottom: none;
-
-        &.has-flyout>a:first-child:after { @include cssTriangle(4px, darken($white, 10%), left); }
-        .flyout { left: 100%; top: -1px;
-          &.right { left: auto; right: 100%; }
-        }
-      }
-    }
-
-  }
-
-  .flyout { background: darken($white, 5%); padding: 20px; margin: 0; border: 1px solid darken($white, 15%); position: absolute; top: $navBarHeight - 1; left: -1px; width: $navFlyoutBaseWidth; z-index: 40; @include box-shadow(0 1px 5px rgba(#000, .1));
-
-    p { line-height: 1.2; font-size: ms(0) - 1; }
-    *:first-child { margin-top: 0; } /* remove margin on any first-child element */
-    *:last-child { margin-bottom: 0; } /* remove margin on last element */
-
-    &.small { width: $navFlyoutBaseWidth / 1.5; }
-    &.large { width: $navFlyoutBaseWidth * 1.75; }
-
-    &.right { left: auto; right: -2px; }
-    &.up { top: auto; bottom: $navBarHeight - 1; }
-
-  }
-
-  ul.flyout, .nav-bar li ul { padding: 0; list-style: none;
-
-    li { border-left: solid 3px #CCC;
-      a { color: $mainColor; border: 1px solid darken($white, 10%); border-width: 1px 1px 0 0; color: #555; display: block; text-align: center;font-size: ms(0); height: auto; line-height: 1; padding: 15px 20px; @include box-shadow(0 1px 0 $shinyEdge inset);
-        &:hover { background: darken($white, 8%); color: #333; }
-      }
-      &.active { margin-top: 0; border-top: 1px solid lighten($black, 30%); border-left: 4px solid lighten($black, 10%);
-        a { background: lighten($black, 30%); border: none; color: #fff; height: auto; margin: 0; position: static; top: 0; @include box-shadow(0 0 0); }
-      }
-    }
-
-  }
-
-
-  /* Mobile Styles */
-  @media only screen and (max-device-width: 1280px) {
-    .touch .nav-bar li.has-flyout>a { padding-right: 36px !important; }
-  }
-
-  @media only screen and (max-width: $screenMedium) and (min-width: $screenSmall) {
-    .touch .nav-bar li a {font-size: ms(0); text-align: center; }
-    .touch .nav-bar li.has-flyout>a.flyout-toggle { padding: 20px !important; }
-    .touch .nav-bar li.has-flyout>a { padding-right: 36px !important; }
-  }
-
-  @media only screen and (max-width: $screenSmall - 1) {
-    .nav-bar { height: auto; text-align: center;
-
-      &>li { float: none; display: block; border-right: none; text-align: center;}
-      &>li>a.main { text-align: center; border-top: 2px groove $ninblack; border-right: none; }
-      &>li:first-child>a.main { border-top: none; }
-      &>li.has-flyout>a.flyout-toggle { position: absolute; right: 0; top: 0; padding: 22px; z-index: 2; display: block; }
-      &>li.has-flyout.is-touch>a.flyout-toggle span { content: ""; width: 0; height: 0; display: block; }
-      &>li.has-flyout>a.flyout-toggle:hover span { border-top-color: #141414; }
-      &.vertical>li.has-flyout>.flyout { left: 0; }
-    }
-
-    .flyout { position: relative; width: 100% !important; top: auto; margin-right: -2px; border-width: 1px 1px 0 1px;
-
-      &.right { float: none; right: auto; left: -1px; }
-      &.small, &.large { width: 100% !important; }
-      p:last-child { margin-bottom: 18px; }
-    }
-
-  }
-  
-  
-:@has_childrenT:@children[%o:Sass::Tree::CommentNode
-:@value[""/* Requires
-   globals.css */;i;	[ :
-@type:normal:@options{ o;
-
-;["I/********************************************************* STYLES */;i	;	[ ;;;@o:Sass::Tree::RuleNode:
-@rule[".hiphop .item;i
-:@parsed_ruleso:"Sass::Selector::CommaSequence:@filename" ;i
-:@members[o:Sass::Selector::Sequence;[o:#Sass::Selector::SimpleSequence
-;@;i
-;[o:Sass::Selector::Class;@;i
-:
-@name["hiphop:@subject0:@sourceso:Set:
-@hash{ o;
-;@;i
-;[o;;@;i
-;["	item;0;o;;{ ;T;	[o:Sass::Tree::PropNode;o:Sass::Script::String;"
-150px;:identifier;@;i;["
-width;	[ :@prop_syntax:new;@:
-@tabsi o;
-
-;["!/* The width of the items */;i;	[ ;;;@o;;o;;"	40px;;;@;i;["padding-top;	[ ; ;!;@;"i o;
-
-;["‰/* The padding to the top; This value should be This value should be equal or bigger then the jump-height (see line 114 and following) */;i;	[ ;;;@o;;o;;"	20px;;;@;i;["padding-bottom;	[ ; ;!;@;"i o;;o;;"	left;;;@;i;["
-float;	[ ; ;!;@;"i ;@;"i o;;["$.hiphop .item:not(:first-child);i;o;;" ;i;[o;;[o;
-;@L;i;[o;;@L;i;["hiphop;0;o;;{ o;
-;@L;i;[o;;@L;i;["	itemo:Sass::Selector::Pseudo
-;@L;i:	@arg[":first-child;["not;:
-class;0;o;;{ ;T;	[o;;o;;"	50px;;;@;i;["padding-left;	[ ; ;!;@;"i o;
-
-;[")/* The distance between the items */;i;	[ ;;;@;@;"i o;
-
-;["7/******************* Styling for the Item Image */;i;	[ ;;;@o;;[".hiphop .item img.image;i;o;;" ;i;[o;;[o;
-;@v;i;[o;;@v;i;["hiphop;0;o;;{ o;
-;@v;i;[o;;@v;i;["	item;0;o;;{ o;
-;@v;i;[o:Sass::Selector::Element	;@v;i:@namespace0;["imgo;;@v;i;["
-image;0;o;;{ ;T;	[o;;o;;"1.0;;;@;i;["opacity;	[ ; ;!;@;"i o;
-
-;["P/* The opacity of the item image when the item is not jumping or dimming */;i;	[ ;;;@o;;o;;"all 1s ease-in-out;;;@;i;["-webkit-transition;	[ ; ;!;@;"i o;;o;;"all 1s ease-in-out;;;@;i;["-moz-transition;	[ ; ;!;@;"i o;;o;;"all 1s ease-in-out;;;@;i;["-o-transition;	[ ; ;!;@;"i o;;o;;"all 1s ease-in-out;;;@;i;["-ms-transition;	[ ; ;!;@;"i o;;o;;"all 1s ease-in-out;;;@;i;["transition;	[ ; ;!;@;"i o;;o;;"relative;;;@;i;["position;	[ ; ;!;@;"i o;;o;;"999;;;@;i;["z-index;	[ ; ;!;@;"i o;
-
-;["8/* The item image should be above the item image */;i;	[ ;;;@o;;o;;"	20px;;;@;i ;["padding-bottom;	[ ; ;!;@;"i o;
-
-;["*/* Some distance to the Item title */;i ;	[ ;;;@;@;"i o;
-
-;["8/******************* Styling for the Item Shadow */;i#;	[ ;;;@o;;[".hiphop .item img.shadow;i$;o;;" ;i$;[o;;[o;
-;@Ø;i$;[o;;@Ø;i$;["hiphop;0;o;;{ o;
-;@Ø;i$;[o;;@Ø;i$;["	item;0;o;;{ o;
-;@Ø;i$;[o;&	;@Ø;i$;'0;["imgo;;@Ø;i$;["shadow;0;o;;{ ;T;	[o;;o:Sass::Script::Number;iÞ;i%:@denominator_units[ :@original"
--29px;@:@numerator_units["px;i%;["top;	[ ; ;!;@;"i o;
-
-;["—/* This is pulls up the shadow; the value normally is around 1,5 x the height of your shadow image, but depends on where you want to have the shadow */;i%;	[ ;;;@o;;o;;"1.0;;;@;i&;["opacity;	[ ; ;!;@;"i o;
-
-;["L/* The opacity of the shadow when the item is not jumping or dimming */;i&;	[ ;;;@o;;o;;"all 1s ease-in-out;;;@;i(;["-webkit-transition;	[ ; ;!;@;"i o;;o;;"all 1s ease-in-out;;;@;i);["-moz-transition;	[ ; ;!;@;"i o;;o;;"all 1s ease-in-out;;;@;i*;["-o-transition;	[ ; ;!;@;"i o;;o;;"all 1s ease-in-out;;;@;i+;["-ms-transition;	[ ; ;!;@;"i o;;o;;"all 1s ease-in-out;;;@;i,;["transition;	[ ; ;!;@;"i o;;o;;"relative;;;@;i.;["position;	[ ; ;!;@;"i o;;o;;"33;;;@;i/;["z-index;	[ ; ;!;@;"i o;
-
-;["N/* The shadow should be above the background, but below the item image */;i/;	[ ;;;@;@;"i o;
-
-;["9/******************* Styling for the Item Heading */;i2;	[ ;;;@o;;[".hiphop .item h2;i3;o;;" ;i3;[o;;[o;
-;@B;i3;[o;;@B;i3;["hiphop;0;o;;{ o;
-;@B;i3;[o;;@B;i3;["	item;0;o;;{ o;
-;@B;i3;[o;&	;@B;i3;'0;["h2;0;o;;{ ;T;	[o;;o;;"center;;;@;i4;["text-align;	[ ; ;!;@;"i o;
-
-;["«/* Centers the More-Text; If you want the text to be on the left side the value would be "left", if you want the text to be on the right side the value would be "right" */;i4;	[ ;;;@o;;o;;"1.0;;;@;i5;["opacity;	[ ; ;!;@;"i o;
-
-;["M/* The opacity of the Heading when the item is not jumping or dimming */;i5;	[ ;;;@o;;o;;"all 1s ease-in-out;;;@;i7;["-webkit-transition;	[ ; ;!;@;"i o;;o;;"all 1s ease-in-out;;;@;i8;["-moz-transition;	[ ; ;!;@;"i o;;o;;"all 1s ease-in-out;;;@;i9;["-o-transition;	[ ; ;!;@;"i o;;o;;"all 1s ease-in-out;;;@;i:;["-ms-transition;	[ ; ;!;@;"i o;;o;;"all 1s ease-in-out;;;@;i;;["transition;	[ ; ;!;@;"i ;@;"i o;
-
-;["O/******************* Styling for the More-Text (also could be an image) */;i>;	[ ;;;@o;;[".hiphop .item .more;i?;o;;" ;i?;[o;;[o;
-;@–;i?;[o;;@–;i?;["hiphop;0;o;;{ o;
-;@–;i?;[o;;@–;i?;["	item;0;o;;{ o;
-;@–;i?;[o;;@–;i?;["	more;0;o;;{ ;T;	[o;;o;;"inherit;;;@;i@;["
-width;	[ ; ;!;@;"i o;;o;;"absolute;;;@;iA;["position;	[ ; ;!;@;"i o;;o;;"center;;;@;iB;["text-align;	[ ; ;!;@;"i o;
-
-;["«/* Centers the More-Text; If you want the text to be on the left side the value would be "left", if you want the text to be on the right side the value would be "right" */;iB;	[ ;;;@o;;o;;"0.0;;;@;iC;["opacity;	[ ; ;!;@;"i o;
-
-;[">/* The More-Text is invisible until you hover the item */;iC;	[ ;;;@o;;o;;"opacity 1s linear;;;@;iE;["-webkit-transition;	[ ; ;!;@;"i o;;o;;"opacity 1s linear;;;@;iF;["-moz-transition;	[ ; ;!;@;"i o;;o;;"opacity 1s linear;;;@;iG;["-o-transition;	[ ; ;!;@;"i o;;o;;"opacity 1s linear;;;@;iH;["-ms-transition;	[ ; ;!;@;"i o;;o;;"opacity 1s linear;;;@;iI;["transition;	[ ; ;!;@;"i o;;o;;"	20px;;;@;iK;["padding-bottom;	[ ; ;!;@;"i o;
-
-;["%/* Some padding to the bottom */;iK;	[ ;;;@;@;"i o;;[".hiphop .item a;iN;o;;" ;iN;[o;;[o;
-;@ü;iN;[o;;@ü;iN;["hiphop;0;o;;{ o;
-;@ü;iN;[o;;@ü;iN;["	item;0;o;;{ o;
-;@ü;iN;[o;&	;@ü;iN;'0;["a;0;o;;{ ;T;	[o;;o;;"#000000;;;@;iN;["
-color;	[ ; ;!;@;"i ;@;"i o;
-
-;["&/* The color for the More-Text */;iN;	[ ;;;@o;;["I.hiphop .item a:hover,
-.hiphop .item a:focus,
-.hiphop .item a:active;iR;o;;" ;iR;[o;;[o;
-;@$;iR;[o;;@$;iR;["hiphop;0;o;;{ o;
-;@$;iR;[o;;@$;iR;["	item;0;o;;{ o;
-;@$;iR;[o;&	;@$;iR;'0;["ao;#
-;@$;iR;$0;["
-hover;;%;0;o;;{ o;;[	"
-o;
-;@$;iR;[o;;@$;iR;["hiphop;0;o;;{ o;
-;@$;iR;[o;;@$;iR;["	item;0;o;;{ o;
-;@$;iR;[o;&	;@$;iR;'0;["ao;#
-;@$;iR;$0;["
-focus;;%;0;o;;{ o;;[	"
-o;
-;@$;iR;[o;;@$;iR;["hiphop;0;o;;{ o;
-;@$;iR;[o;;@$;iR;["	item;0;o;;{ o;
-;@$;iR;[o;&	;@$;iR;'0;["ao;#
-;@$;iR;$0;["active;;%;0;o;;{ ;T;	[o;;o;;"	none;;;@;iR;["text-decoration;	[ ; ;!;@;"i ;@;"i o;
-
-;["E/* Removes the underlining of the More-Text when you hover it */;iR;	[ ;;;@o;
-
-;["O/********************************************************* HOVER STYLES */;iT;	[ ;;;@o;
-
-;["O/********************************************************* #basis:hover */;iU;	[ ;;;@o;;["f.hiphop.dim:hover .item img.image,
-.hiphop.dim:hover .item img.shadow,
-.hiphop.dim:hover .item h2;iX;o;;" ;iX;[o;;[o;
-;@;iX;[o;;@;iX;["hiphopo;;@;iX;["dimo;#
-;@;iX;$0;["
-hover;;%;0;o;;{ o;
-;@;iX;[o;;@;iX;["	item;0;o;;{ o;
-;@;iX;[o;&	;@;iX;'0;["imgo;;@;iX;["
-image;0;o;;{ o;;[	"
-o;
-;@;iX;[o;;@;iX;["hiphopo;;@;iX;["dimo;#
-;@;iX;$0;["
-hover;;%;0;o;;{ o;
-;@;iX;[o;;@;iX;["	item;0;o;;{ o;
-;@;iX;[o;&	;@;iX;'0;["imgo;;@;iX;["shadow;0;o;;{ o;;[	"
-o;
-;@;iX;[o;;@;iX;["hiphopo;;@;iX;["dimo;#
-;@;iX;$0;["
-hover;;%;0;o;;{ o;
-;@;iX;[o;;@;iX;["	item;0;o;;{ o;
-;@;iX;[o;&	;@;iX;'0;["h2;0;o;;{ ;T;	[o;;o;;"0.5;;;@;iY;["opacity;	[ ; ;!;@;"i o;
-
-;["q/* Dimming the Item-Image, the Shadow and the Heading when dimming is active and another item is selected */;iY;	[ ;;;@o;;o;;"all 1s ease-in-out;;;@;i[;["-webkit-transition;	[ ; ;!;@;"i o;;o;;"all 1s ease-in-out;;;@;i\;["-moz-transition;	[ ; ;!;@;"i o;;o;;"all 1s ease-in-out;;;@;i];["-o-transition;	[ ; ;!;@;"i o;;o;;"all 1s ease-in-out;;;@;i^;["-ms-transition;	[ ; ;!;@;"i o;;o;;"all 1s ease-in-out;;;@;i_;["transition;	[ ; ;!;@;"i ;@;"i o;
-
-;["N/********************************************************* .item:hover */;ib;	[ ;;;@o;;["B.hiphop.dim .item:hover h2,
-.hiphop.dim .item:hover img.image;id;o;;" ;id;[o;;[o;
-;@;id;[o;;@;id;["hiphopo;;@;id;["dim;0;o;;{ o;
-;@;id;[o;;@;id;["	itemo;#
-;@;id;$0;["
-hover;;%;0;o;;{ o;
-;@;id;[o;&	;@;id;'0;["h2;0;o;;{ o;;[	"
-o;
-;@;id;[o;;@;id;["hiphopo;;@;id;["dim;0;o;;{ o;
-;@;id;[o;;@;id;["	itemo;#
-;@;id;$0;["
-hover;;%;0;o;;{ o;
-;@;id;[o;&	;@;id;'0;["imgo;;@;id;["
-image;0;o;;{ ;T;	[o;;o;;"1.0;;;@;ie;["opacity;	[ ; ;!;@;"i o;
-
-;["/* The opacity of the Item-Image and the Shadow that you are hovering should be 100%, even if the other items are dimming; Opacity: 100% = 1.0 , 0% = 0.0  */;ie;	[ ;;;@;@;"i o;;[".hiphop .item:hover .more;ih;o;;" ;ih;[o;;[o;
-;@n;ih;[o;;@n;ih;["hiphop;0;o;;{ o;
-;@n;ih;[o;;@n;ih;["	itemo;#
-;@n;ih;$0;["
-hover;;%;0;o;;{ o;
-;@n;ih;[o;;@n;ih;["	more;0;o;;{ ;T;	[o;;o;;"1.0;;;@;ii;["opacity;	[ ; ;!;@;"i o;
-
-;["e/* The More-Text should become visible when you hover an item; Opacity: 100% = 1.0 , 0% = 0.0 */;ii;	[ ;;;@;@;"i o;;["'.hiphop.jump .item:hover img.image;il;o;;" ;il;[o;;[o;
-;@™;il;[o;;@™;il;["hiphopo;;@™;il;["	jump;0;o;;{ o;
-;@™;il;[o;;@™;il;["	itemo;#
-;@™;il;$0;["
-hover;;%;0;o;;{ o;
-;@™;il;[o;&	;@™;il;'0;["imgo;;@™;il;["
-image;0;o;;{ ;T;	[o;;o:Sass::Script::Funcall
-:@keywords{ ;im;"translate:
-@args[o;(;i ;im;)[ ;*"0px;@;+["pxo;(;iÓ;im;)[ ;*"
--40px;@;+["px;@;im;["-webkit-transform;	[ ; ;!;@;"i o;
-
-;["v/* Moving the Item-Image upwards; translate( x-Value, y-Value ) in Pixels; Negative value means moving upwards */;im;	[ ;;;@o;;o;,
-;-{ ;in;"translate;.[o;(;i ;in;)[ ;*"0px;@;+["pxo;(;iÓ;in;)[ ;*"
--40px;@;+["px;@;in;["-moz-transform;	[ ; ;!;@;"i o;;o;,
-;-{ ;io;"translate;.[o;(;i ;io;)[ ;*"0px;@;+["pxo;(;iÓ;io;)[ ;*"
--40px;@;+["px;@;io;["-o-transform;	[ ; ;!;@;"i o;;o;,
-;-{ ;ip;"translate;.[o;(;i ;ip;)[ ;*"0px;@;+["pxo;(;iÓ;ip;)[ ;*"
--40px;@;+["px;@;ip;["-ms-transform;	[ ; ;!;@;"i o;;o;,
-;-{ ;iq;"translate;.[o;(;i ;iq;)[ ;*"0px;@;+["pxo;(;iÓ;iq;)[ ;*"
--40px;@;+["px;@;iq;["transform;	[ ; ;!;@;"i ;@;"i o;;["(.hiphop.jump .item:hover img.shadow;it;o;;" ;it;[o;;[o;
-;@;it;[o;;@;it;["hiphopo;;@;it;["	jump;0;o;;{ o;
-;@;it;[o;;@;it;["	itemo;#
-;@;it;$0;["
-hover;;%;0;o;;{ o;
-;@;it;[o;&	;@;it;'0;["imgo;;@;it;["shadow;0;o;;{ ;T;	[o;;o;;"0.5;;;@;iu;["opacity;	[ ; ;!;@;"i o;
-
-;["Z/* The Shadow is dimming a bit when the item is up; Opacity: 100% = 1.0 , 0% = 0.0 */;iu;	[ ;;;@o;;o;,
-;-{ ;iv;"
-scale;.[o;(;f0.90000000000000002 ÌÍ;iv;)[ ;*"0.9;@;+[ ;@;iv;["-webkit-transform;	[ ; ;!;@;"i o;
-
-;["i/* Shrink the Shadow a bit; Scale: 1.0 = 100% of the original size, 0.0 = 0% of the original size */;iv;	[ ;;;@o;;o;,
-;-{ ;iw;"
-scale;.[o;(;f0.90000000000000002 ÌÍ;iw;)@R;*"0.9;@;+[ ;@;iw;["-moz-transform;	[ ; ;!;@;"i o;;o;,
-;-{ ;ix;"
-scale;.[o;(;f0.90000000000000002 ÌÍ;ix;)@R;*"0.9;@;+[ ;@;ix;["-o-transform;	[ ; ;!;@;"i o;;o;,
-;-{ ;iy;"
-scale;.[o;(;f0.90000000000000002 ÌÍ;iy;)@R;*"0.9;@;+[ ;@;iy;["-ms-transform;	[ ; ;!;@;"i o;;o;,
-;-{ ;iz;"
-scale;.[o;(;f0.90000000000000002 ÌÍ;iz;)@R;*"0.9;@;+[ ;@;iz;["transform;	[ ; ;!;@;"i ;@;"i o;;["
-.logo;i;o;;" ;i;[o;;[o;
-;@;i;[o;;@;i;["	logo;0;o;;{ ;T;	[o;;o;;"20px 0px 0px 2%;;;@;i{;["padding;	[ ; ;!;@;"i o;;o;;"visible;;;@;i|;["overflow;	[ ; ;!;@;"i ;@;"i o;;[".nav-bar;i€;o;;" ;i€;[o;;[o;
-;@¬;i€;[o;;@¬;i€;["nav-bar;0;o;;{ ;T;	[o;;o:Sass::Script::Variable	;i€;"navBarHeight;@:@underscored_name"navBarHeight;i€;["height;	[ ; ;!;@;"i o;;o:Sass::Script::Operation
-:@operand2o;(;i;i€;)@R;*"8;@;+[ ;i€:@operator:div:@operand1o;/	;i€;"navBarHeight;@;0"navBarHeight;@;i€;["margin-top;	[ ; ;!;@;"i o;;o;;"0;;;@;i€;["padding;	[ ; ;!;@;"i o;;["& > li;i‚;o;;" ;i‚;[o;;[o;
-;@Ô;i‚;[o:Sass::Selector::Parent;@Ô;i‚;0;o;;{ ">o;
-;@Ô;i‚;[o;&	;@Ô;i‚;'0;["li;0;o;;{ ;T;	[o;;o;;"	left;;;@;i‚;["
-float;	[ ; ;!;@;"i o;;o;;"
-block;;;@;i‚;["display;	[ ; ;!;@;"i o;;o;;"relative;;;@;i‚;["position;	[ ; ;!;@;"i o;;o;;"	none;;;@;i‚;["text-decoration;	[ ; ;!;@;"i o;;o;;"0;;;@;i‚;["padding;	[ ; ;!;@;"i o;;o;;"0;;;@;i‚;["margin;	[ ; ;!;@;"i o;;o;1
-;2o;(;i;i‚;)@R;*"2;@;+[ ;i‚;3:
-minus;5o;/	;i‚;"navBarHeight;@;0"navBarHeight;@;i‚;["line-height;	[ ; ;!;@;"i o;;["&.active;i„;o;;" ;i„;[o;;[o;
-;@;i„;[o;6;@;i„o;;@;i„;["active;0;o;;{ ;T;	[o;;o;/	;i„;"
-white;@;0"
-white;i„;["background;	[ ; ;!;@;"i o;;["
-& > a;i…;o;;" ;i…;[o;;[o;
-;@1;i…;[o;6;@1;i…;0;o;;{ ">o;
-;@1;i…;[o;&	;@1;i…;'0;["a;0;o;;{ ;T;	[o;;o;/	;i…;"
-white;@;0"
-white;i…;["
-color;	[ ; ;!;@;"i o;;o;;"default;;;@;i…;["cursor;	[ ; ;!;@;"i ;@;"i o;;["&:hover;i†;o;;" ;i†;[o;;[o;
-;@T;i†;[o;6;@T;i†o;#
-;@T;i†;$0;["
-hover;;%;0;o;;{ ;T;	[o;;o;/	;i†;"mainColor;@;0"mainColor;i†;["background;	[ ; ;!;@;"i o;;o;;"default;;;@;i†;["cursor;	[ ; ;!;@;"i ;@;"i ;@;"i o;;["&:hover;iˆ;o;;" ;iˆ;[o;;[o;
-;@r;iˆ;[o;6;@r;iˆo;#
-;@r;iˆ;$0;["
-hover;;%;0;o;;{ ;T;	[o;;o;,
-;-{ ;iˆ;"lighten;.[o;/	;iˆ;"darkdarkbrown;@;0"darkdarkbrowno;(;i;iˆ;)[ ;*"10%;@;+["%;@;iˆ;["background;	[ ; ;!;@;"i ;@;"i o;;["a;iŠ;o;;" ;iŠ;[o;;[o;
-;@“;iŠ;[o;&	;@“;iŠ;'0;["a;0;o;;{ ;T;	[o;;o;/	;iŠ;"mainColor;@;0"mainColor;iŠ;["
-color;	[ ; ;!;@;"i ;@;"i o;;["ul;i‹;o;;" ;i‹;[o;;[o;
-;@ª;i‹;[o;&	;@ª;i‹;'0;["ul;0;o;;{ ;T;	[o;;o;;"0;;;@;i‹;["margin-bottom;	[ ; ;!;@;"i ;@;"i o;;[".flyout;iŒ;o;;" ;iŒ;[o;;[o;
-;@À;iŒ;[o;;@À;iŒ;["flyout;0;o;;{ ;T;	[o;;o;;"	none;;;@;iŒ;["display;	[ ; ;!;@;"i ;@;"i o;;["&.has-flyout;iŽ;o;;" ;iŽ;[o;;[o;
-;@Ö;iŽ;[o;6;@Ö;iŽo;;@Ö;iŽ;["has-flyout;0;o;;{ ;T;	[o;;["& > a:first-child;i;o;;" ;i;[o;;[o;
-;@ç;i;[o;6;@ç;i;0;o;;{ ">o;
-;@ç;i;[o;&	;@ç;i;'0;["ao;#
-;@ç;i;$0;["first-child;;%;0;o;;{ ;T;	[o;;o;;"	36px;;;@;i;["padding-right;	[ ; ;!;@;"i o;;o;;"relative;;;@;i;["position;	[ ; ;!;@;"i o;;["&:after;i;o;;" ;i;[o;;[o;
-;@;i;[o;6;@;io;#
-;@;i;$0;["
-after;;%;0;o;;{ ;T;	[	o:Sass::Tree::MixinNode;-{ ;i;"cssTriangle;.[o;(;i	;i;)[ ;*"4px;@;+["pxo;,
-;-{ ;i;"darken;.[o;/	;i;"
-white;@;0"
-whiteo;(;i;i;)[ ;*"10%;@;+["%;@o;	;"top;i;;;@;	[ ;@o;;o;;"absolute;;;@;i;["position;	[ ; ;!;@;"i o;;o;;"	20px;;;@;i;["
-right;	[ ; ;!;@;"i o;;o;;"	17px;;;@;i;["top;	[ ; ;!;@;"i ;@;"i ;@;"i o;;["& > a.flyout-toggle;i’;o;;" ;i’;[o;;[o;
-;@G;i’;[o;6;@G;i’;0;o;;{ ">o;
-;@G;i’;[o;&	;@G;i’;'0;["ao;;@G;i’;["flyout-toggle;0;o;;{ ;T;	[o;;o;;"0 !important;;;@;i’;["border-left;	[ ; ;!;@;"i o;;o;;"absolute;;;@;i’;["position;	[ ; ;!;@;"i o;;o;;"0;;;@;i’;["
-right;	[ ; ;!;@;"i o;;o;;"0;;;@;i’;["top;	[ ; ;!;@;"i o;;o;;"	22px;;;@;i’;["padding;	[ ; ;!;@;"i o;;o;;"2;;;@;i’;["z-index;	[ ; ;!;@;"i o;;o;;"
-block;;;@;i’;["display;	[ ; ;!;@;"i ;@;"i o;;["&.is-touch;i“;o;;" ;i“;[o;;[o;
-;@Š;i“;[o;6;@Š;i“o;;@Š;i“;["is-touch;0;o;;{ ;T;	[o;;["& > a:first-child;i”;o;;" ;i”;[o;;[o;
-;@›;i”;[o;6;@›;i”;0;o;;{ ">o;
-;@›;i”;[o;&	;@›;i”;'0;["ao;#
-;@›;i”;$0;["first-child;;%;0;o;;{ ;T;	[o;;o;;"	55px;;;@;i”;["padding-right;	[ ; ;!;@;"i ;@;"i o;;["& > a.flyout-toggle;i•;o;;" ;i•;[o;;[o;
-;@º;i•;[o;6;@º;i•;0;o;;{ ">o;
-;@º;i•;[o;&	;@º;i•;'0;["ao;;@º;i•;["flyout-toggle;0;o;;{ ;T;	[o;;o;;"1px dashed #666;;;@;i•;["border-left;	[ ; ;!;@;"i ;@;"i ;@;"i ;@;"i ;@;"i o;;["& > li > a:first-child;iš;o;;" ;iš;[o;;[
-o;
-;@Ù;iš;[o;6;@Ù;iš;0;o;;{ ">o;
-;@Ù;iš;[o;&	;@Ù;iš;'0;["li;0;o;;{ ">o;
-;@Ù;iš;[o;&	;@Ù;iš;'0;["ao;#
-;@Ù;iš;$0;["first-child;;%;0;o;;{ ;T;	[
-o;;o;;"relative;;;@;iš;["position;	[ ; ;!;@;"i o;;o;;"0 20px;;;@;iš;["padding;	[ ; ;!;@;"i o;;o;;"
-block;;;@;iš;["display;	[ ; ;!;@;"i o;;o;;"	none;;;@;iš;["text-decoration;	[ ; ;!;@;"i o;;o;,
-;-{ ;iš;"ms;.[o;(;i ;iš;)@R;*"0;@;+[ ;@;iš;["font-size;	[ ; ;!;@;"i ;@;"i o;;["& > li > input;i›;o;;" ;i›;[o;;[
-o;
-;@;i›;[o;6;@;i›;0;o;;{ ">o;
-;@;i›;[o;&	;@;i›;'0;["li;0;o;;{ ">o;
-;@;i›;[o;&	;@;i›;'0;["
-input;0;o;;{ ;T;	[o;;o;;"0 10px;;;@;i›;["margin;	[ ; ;!;@;"i ;@;"i o;;["&.vertical;i;o;;" ;i;[o;;[o;
-;@A;i;[o;6;@A;io;;@A;i;["vertical;0;o;;{ ;T;	[o;;o;;"	auto;;;@;i;["height;	[ ; ;!;@;"i o;;o;;"0;;;@;i;["margin-top;	[ ; ;!;@;"i o;;["& > li;iŸ;o;;" ;iŸ;[o;;[o;
-;@^;iŸ;[o;6;@^;iŸ;0;o;;{ ">o;
-;@^;iŸ;[o;&	;@^;iŸ;'0;["li;0;o;;{ ;T;	[	o;;o;;"	none;;;@;iŸ;["
-float;	[ ; ;!;@;"i o;;o;;"	none;;;@;iŸ;["border-bottom;	[ ; ;!;@;"i o;;["'&.has-flyout > a:first-child:after;i¡;o;;" ;i¡;[o;;[o;
-;@€;i¡;[o;6;@€;i¡o;;@€;i¡;["has-flyout;0;o;;{ ">o;
-;@€;i¡;[o;&	;@€;i¡;'0;["ao;#
-;@€;i¡;$0;["first-child;;%o;#
-;@€;i¡;$0;["
-after;;%;0;o;;{ ;T;	[o;8;-{ ;i¡;"cssTriangle;.[o;(;i	;i¡;)[ ;*"4px;@;+["pxo;,
-;-{ ;i¡;"darken;.[o;/	;i¡;"
-white;@;0"
-whiteo;(;i;i¡;)[ ;*"10%;@;+["%;@o;	;"	left;i¡;;;@;	[ ;@;@;"i o;;[".flyout;i¢;o;;" ;i¢;[o;;[o;
-;@·;i¢;[o;;@·;i¢;["flyout;0;o;;{ ;T;	[o;;o;;"	100%;;;@;i¢;["	left;	[ ; ;!;@;"i o;;o;(;iú;i¢;)[ ;*"	-1px;@;+["px;i¢;["top;	[ ; ;!;@;"i o;;["&.right;i£;o;;" ;i£;[o;;[o;
-;@Ö;i£;[o;6;@Ö;i£o;;@Ö;i£;["
-right;0;o;;{ ;T;	[o;;o;;"	auto;;;@;i£;["	left;	[ ; ;!;@;"i o;;o;;"	100%;;;@;i£;["
-right;	[ ; ;!;@;"i ;@;"i ;@;"i ;@;"i ;@;"i ;@;"i o;;[".flyout;iª;o;;" ;iª;[o;;[o;
-;@ó;iª;[o;;@ó;iª;["flyout;0;o;;{ ;T;	[o;;o;,
-;-{ ;iª;"darken;.[o;/	;iª;"
-white;@;0"
-whiteo;(;i
-;iª;)[ ;*"5%;@;+["%;@;iª;["background;	[ ; ;!;@;"i o;;o;;"	20px;;;@;iª;["padding;	[ ; ;!;@;"i o;;o;;"0;;;@;iª;["margin;	[ ; ;!;@;"i o;;o:Sass::Script::List	;[o;(;i;iª;)[ ;*"1px;@;+["pxo;	;"
-solid;iª;;;@o;,
-;-{ ;iª;"darken;.[o;/	;iª;"
-white;@;0"
-whiteo;(;i;iª;)[ ;*"15%;@;+["%;@;iª:@separator:
-space;@;iª;["border;	[ ; ;!;@;"i o;;o;;"absolute;;;@;iª;["position;	[ ; ;!;@;"i o;;o;1
-;2o;(;i;iª;)@R;*"1;@;+[ ;iª;3;7;5o;/	;iª;"navBarHeight;@;0"navBarHeight;@;iª;["top;	[ ; ;!;@;"i o;;o;(;iú;iª;)[ ;*"	-1px;@;+["px;iª;["	left;	[ ; ;!;@;"i o;;o;/	;iª;"navFlyoutBaseWidth;@;0"navFlyoutBaseWidth;iª;["
-width;	[ ; ;!;@;"i o;;o;;"40;;;@;iª;["z-index;	[ ; ;!;@;"i o;8;-{ ;iª;"box-shadow;.[o;9	;[	o;(;i ;iª;)@R;*"0;@;+[ o;(;i;iª;)[ ;*"1px;@;+["pxo;(;i
-;iª;)[ ;*"5px;@;+["pxo;,
-;-{ ;iª;"	rgba;.[o:Sass::Script::Color	;0;iª:@attrs{	:redi :
-alphai:
-greeni :	bluei ;@o;(;f0.10000000000000001 ™š;iª;)@R;*"0.1;@;+[ ;@;iª;:;;;@;	[ ;@o;;["p;i¬;o;;" ;i¬;[o;;[o;
-;@};i¬;[o;&	;@};i¬;'0;["p;0;o;;{ ;T;	[o;;o;;"1.2;;;@;i¬;["line-height;	[ ; ;!;@;"i o;;o;1
-;2o;(;i;i¬;)@R;*"1;@;+[ ;i¬;3;7;5o;,
-;-{ ;i¬;"ms;.[o;(;i ;i¬;)@R;*"0;@;+[ ;@;@;i¬;["font-size;	[ ; ;!;@;"i ;@;"i o;;["*:first-child;i­;o;;" ;i­;[o;;[o;
-;@¢;i­;[o:Sass::Selector::Universal;@¢;i­;'0o;#
-;@¢;i­;$0;["first-child;;%;0;o;;{ ;T;	[o;;o;;"0;;;@;i­;["margin-top;	[ ; ;!;@;"i ;@;"i o;
-
-;["3/* remove margin on any first-child element */;i­;	[ ;;;@o;;["*:last-child;i®;o;;" ;i®;[o;;[o;
-;@½;i®;[o;B;@½;i®;'0o;#
-;@½;i®;$0;["last-child;;%;0;o;;{ ;T;	[o;;o;;"0;;;@;i®;["margin-bottom;	[ ; ;!;@;"i ;@;"i o;
-
-;["(/* remove margin on last element */;i®;	[ ;;;@o;;["&.small;i°;o;;" ;i°;[o;;[o;
-;@Ø;i°;[o;6;@Ø;i°o;;@Ø;i°;["
-small;0;o;;{ ;T;	[o;;o;1
-;2o;(;f1.5;i°;)@R;*"1.5;@;+[ ;i°;3;4;5o;/	;i°;"navFlyoutBaseWidth;@;0"navFlyoutBaseWidth;@;i°;["
-width;	[ ; ;!;@;"i ;@;"i o;;["&.large;i±;o;;" ;i±;[o;;[o;
-;@õ;i±;[o;6;@õ;i±o;;@õ;i±;["
-large;0;o;;{ ;T;	[o;;o;1
-;2o;(;f	1.75;i±;)@R;*"	1.75;@;+[ ;i±;3:
-times;5o;/	;i±;"navFlyoutBaseWidth;@;0"navFlyoutBaseWidth;@;i±;["
-width;	[ ; ;!;@;"i ;@;"i o;;["&.right;i³;o;;" ;i³;[o;;[o;
-;@	;i³;[o;6;@	;i³o;;@	;i³;["
-right;0;o;;{ ;T;	[o;;o;;"	auto;;;@;i³;["	left;	[ ; ;!;@;"i o;;o;(;iù;i³;)[ ;*"	-2px;@;+["px;i³;["
-right;	[ ; ;!;@;"i ;@;"i o;;["	&.up;i´;o;;" ;i´;[o;;[o;
-;@2	;i´;[o;6;@2	;i´o;;@2	;i´;["up;0;o;;{ ;T;	[o;;o;;"	auto;;;@;i´;["top;	[ ; ;!;@;"i o;;o;1
-;2o;(;i;i´;)@R;*"1;@;+[ ;i´;3;7;5o;/	;i´;"navBarHeight;@;0"navBarHeight;@;i´;["bottom;	[ ; ;!;@;"i ;@;"i ;@;"i o;;["ul.flyout, .nav-bar li ul;i¸;o;;" ;i¸;[o;;[o;
-;@T	;i¸;[o;&	;@T	;i¸;'0;["ulo;;@T	;i¸;["flyout;0;o;;{ o;;[o;
-;@T	;i¸;[o;;@T	;i¸;["nav-bar;0;o;;{ o;
-;@T	;i¸;[o;&	;@T	;i¸;'0;["li;0;o;;{ o;
-;@T	;i¸;[o;&	;@T	;i¸;'0;["ul;0;o;;{ ;T;	[o;;o;;"0;;;@;i¸;["padding;	[ ; ;!;@;"i o;;o;;"	none;;;@;i¸;["list-style;	[ ; ;!;@;"i o;;["li;iº;o;;" ;iº;[o;;[o;
-;@Š	;iº;[o;&	;@Š	;iº;'0;["li;0;o;;{ ;T;	[o;;o;;"solid 3px #CCC;;;@;iº;["border-left;	[ ; ;!;@;"i o;;["a;i»;o;;" ;i»;[o;;[o;
-;@ 	;i»;[o;&	;@ 	;i»;'0;["a;0;o;;{ ;T;	[o;;o;/	;i»;"mainColor;@;0"mainColor;i»;["
-color;	[ ; ;!;@;"i o;;o;9	;[o;(;i;i»;)[ ;*"1px;@;+["pxo;	;"
-solid;i»;;;@o;,
-;-{ ;i»;"darken;.[o;/	;i»;"
-white;@;0"
-whiteo;(;i;i»;)[ ;*"10%;@;+["%;@;i»;:;;;@;i»;["border;	[ ; ;!;@;"i o;;o;;"1px 1px 0 0;;;@;i»;["border-width;	[ ; ;!;@;"i o;;o;;"	#555;;;@;i»;["
-color;	[ ; ;!;@;"i o;;o;;"
-block;;;@;i»;["display;	[ ; ;!;@;"i o;;o;;"center;;;@;i»;["text-align;	[ ; ;!;@;"i o;;o;,
-;-{ ;i»;"ms;.[o;(;i ;i»;)@R;*"0;@;+[ ;@;i»;["font-size;	[ ; ;!;@;"i o;;o;;"	auto;;;@;i»;["height;	[ ; ;!;@;"i o;;o;;"1;;;@;i»;["line-height;	[ ; ;!;@;"i o;;o;;"15px 20px;;;@;i»;["padding;	[ ; ;!;@;"i o;8;-{ ;i»;"box-shadow;.[o;9	;[
-o;(;i ;i»;)@R;*"0;@;+[ o;(;i;i»;)[ ;*"1px;@;+["pxo;(;i ;i»;)@R;*"0;@;+[ o;/	;i»;"shinyEdge;@;0"shinyEdgeo;	;"
-inset;i»;;;@;i»;:;;;@;	[ ;@o;;["&:hover;i¼;o;;" ;i¼;[o;;[o;
-;@
-;i¼;[o;6;@
-;i¼o;#
-;@
-;i¼;$0;["
-hover;;%;0;o;;{ ;T;	[o;;o;,
-;-{ ;i¼;"darken;.[o;/	;i¼;"
-white;@;0"
-whiteo;(;i;i¼;)[ ;*"8%;@;+["%;@;i¼;["background;	[ ; ;!;@;"i o;;o;;"	#333;;;@;i¼;["
-color;	[ ; ;!;@;"i ;@;"i ;@;"i o;;["&.active;i¾;o;;" ;i¾;[o;;[o;
-;@C
-;i¾;[o;6;@C
-;i¾o;;@C
-;i¾;["active;0;o;;{ ;T;	[	o;;o;;"0;;;@;i¾;["margin-top;	[ ; ;!;@;"i o;;o;9	;[o;(;i;i¾;)[ ;*"1px;@;+["pxo;	;"
-solid;i¾;;;@o;,
-;-{ ;i¾;"lighten;.[o;/	;i¾;"
-black;@;0"
-blacko;(;i#;i¾;)[ ;*"30%;@;+["%;@;i¾;:;;;@;i¾;["border-top;	[ ; ;!;@;"i o;;o;9	;[o;(;i	;i¾;)[ ;*"4px;@;+["pxo;	;"
-solid;i¾;;;@o;,
-;-{ ;i¾;"lighten;.[o;/	;i¾;"
-black;@;0"
-blacko;(;i;i¾;)[ ;*"10%;@;+["%;@;i¾;:;;;@;i¾;["border-left;	[ ; ;!;@;"i o;;["a;i¿;o;;" ;i¿;[o;;[o;
-;@Œ
-;i¿;[o;&	;@Œ
-;i¿;'0;["a;0;o;;{ ;T;	[o;;o;,
-;-{ ;i¿;"lighten;.[o;/	;i¿;"
-black;@;0"
-blacko;(;i#;i¿;)[ ;*"30%;@;+["%;@;i¿;["background;	[ ; ;!;@;"i o;;o;;"	none;;;@;i¿;["border;	[ ; ;!;@;"i o;;o;;"	#fff;;;@;i¿;["
-color;	[ ; ;!;@;"i o;;o;;"	auto;;;@;i¿;["height;	[ ; ;!;@;"i o;;o;;"0;;;@;i¿;["margin;	[ ; ;!;@;"i o;;o;;"static;;;@;i¿;["position;	[ ; ;!;@;"i o;;o;;"0;;;@;i¿;["top;	[ ; ;!;@;"i o;8;-{ ;i¿;"box-shadow;.[o;9	;[o;(;i ;i¿;)@R;*"0;@;+[ o;(;i ;i¿;)@R;*"0;@;+[ o;(;i ;i¿;)@R;*"0;@;+[ ;i¿;:;;;@;	[ ;@;@;"i ;@;"i ;@;"i ;@;"i o;
-
-;["/* Mobile Styles */;iÆ;	[ ;;;@o:Sass::Tree::MediaNode;" ;iÇ:@query["	only" "screen"
- and "(o;	;"max-device-width;iÇ;;;@": o;(;i ;iÇ;)[ ;*"1280px;@;+["px");T;	[o;;["$.touch .nav-bar li.has-flyout>a;iÈ;o;;" ;iÈ;[o;;[
-o;
-;@ö
-;iÈ;[o;;@ö
-;iÈ;["
-touch;0;o;;{ o;
-;@ö
-;iÈ;[o;;@ö
-;iÈ;["nav-bar;0;o;;{ o;
-;@ö
-;iÈ;[o;&	;@ö
-;iÈ;'0;["lio;;@ö
-;iÈ;["has-flyout;0;o;;{ ">o;
-;@ö
-;iÈ;[o;&	;@ö
-;iÈ;'0;["a;0;o;;{ ;T;	[o;;o;;"36px !important;;;@;iÈ;["padding-right;	[ ; ;!;@;"i ;@;"i ;@;"i o;D;" ;iË;E["	only" "screen"
- and "(o;	;"max-width;iË;;;@": o;/	;iË;"screenMedium;@;0"screenMedium")"
- and "(o;	;"min-width;iË;;;@": o;/	;iË;"screenSmall;@;0"screenSmall");T;	[o;;[".touch .nav-bar li a;iÌ;o;;" ;iÌ;[o;;[	o;
-;@>;iÌ;[o;;@>;iÌ;["
-touch;0;o;;{ o;
-;@>;iÌ;[o;;@>;iÌ;["nav-bar;0;o;;{ o;
-;@>;iÌ;[o;&	;@>;iÌ;'0;["li;0;o;;{ o;
-;@>;iÌ;[o;&	;@>;iÌ;'0;["a;0;o;;{ ;T;	[o;;o;,
-;-{ ;iÌ;"ms;.[o;(;i ;iÌ;)@R;*"0;@;+[ ;@;iÌ;["font-size;	[ ; ;!;@;"i o;;o;;"center;;;@;iÌ;["text-align;	[ ; ;!;@;"i ;@;"i o;;["2.touch .nav-bar li.has-flyout>a.flyout-toggle;iÍ;o;;" ;iÍ;[o;;[
-o;
-;@t;iÍ;[o;;@t;iÍ;["
-touch;0;o;;{ o;
-;@t;iÍ;[o;;@t;iÍ;["nav-bar;0;o;;{ o;
-;@t;iÍ;[o;&	;@t;iÍ;'0;["lio;;@t;iÍ;["has-flyout;0;o;;{ ">o;
-;@t;iÍ;[o;&	;@t;iÍ;'0;["ao;;@t;iÍ;["flyout-toggle;0;o;;{ ;T;	[o;;o;;"20px !important;;;@;iÍ;["padding;	[ ; ;!;@;"i ;@;"i o;;["$.touch .nav-bar li.has-flyout>a;iÎ;o;;" ;iÎ;[o;;[
-o;
-;@¦;iÎ;[o;;@¦;iÎ;["
-touch;0;o;;{ o;
-;@¦;iÎ;[o;;@¦;iÎ;["nav-bar;0;o;;{ o;
-;@¦;iÎ;[o;&	;@¦;iÎ;'0;["lio;;@¦;iÎ;["has-flyout;0;o;;{ ">o;
-;@¦;iÎ;[o;&	;@¦;iÎ;'0;["a;0;o;;{ ;T;	[o;;o;;"36px !important;;;@;iÎ;["padding-right;	[ ; ;!;@;"i ;@;"i ;@;"i o;D;" ;iÑ;E["	only" "screen"
- and "(o;	;"max-width;iÑ;;;@": o;1
-;2o;(;i;iÑ;)@R;*"1;@;+[ ;iÑ;3;7;5o;/	;iÑ;"screenSmall;@;0"screenSmall;@");T;	[o;;[".nav-bar;iÒ;o;;" ;iÒ;[o;;[o;
-;@é;iÒ;[o;;@é;iÒ;["nav-bar;0;o;;{ ;T;	[o;;o;;"	auto;;;@;iÒ;["height;	[ ; ;!;@;"i o;;o;;"center;;;@;iÒ;["text-align;	[ ; ;!;@;"i o;;["& > li;iÔ;o;;" ;iÔ;[o;;[o;
-;@;iÔ;[o;6;@;iÔ;0;o;;{ ">o;
-;@;iÔ;[o;&	;@;iÔ;'0;["li;0;o;;{ ;T;	[	o;;o;;"	none;;;@;iÔ;["
-float;	[ ; ;!;@;"i o;;o;;"
-block;;;@;iÔ;["display;	[ ; ;!;@;"i o;;o;;"	none;;;@;iÔ;["border-right;	[ ; ;!;@;"i o;;o;;"center;;;@;iÔ;["text-align;	[ ; ;!;@;"i ;@;"i o;;["& > li > a.main;iÕ;o;;" ;iÕ;[o;;[
-o;
-;@3;iÕ;[o;6;@3;iÕ;0;o;;{ ">o;
-;@3;iÕ;[o;&	;@3;iÕ;'0;["li;0;o;;{ ">o;
-;@3;iÕ;[o;&	;@3;iÕ;'0;["ao;;@3;iÕ;["	main;0;o;;{ ;T;	[o;;o;;"center;;;@;iÕ;["text-align;	[ ; ;!;@;"i o;;o;9	;[o;(;i;iÕ;)[ ;*"2px;@;+["pxo;	;"groove;iÕ;;;@o;/	;iÕ;"ninblack;@;0"ninblack;iÕ;:;;;@;iÕ;["border-top;	[ ; ;!;@;"i o;;o;;"	none;;;@;iÕ;["border-right;	[ ; ;!;@;"i ;@;"i o;;[" & > li:first-child > a.main;iÖ;o;;" ;iÖ;[o;;[
-o;
-;@p;iÖ;[o;6;@p;iÖ;0;o;;{ ">o;
-;@p;iÖ;[o;&	;@p;iÖ;'0;["lio;#
-;@p;iÖ;$0;["first-child;;%;0;o;;{ ">o;
-;@p;iÖ;[o;&	;@p;iÖ;'0;["ao;;@p;iÖ;["	main;0;o;;{ ;T;	[o;;o;;"	none;;;@;iÖ;["border-top;	[ ; ;!;@;"i ;@;"i o;;["(& > li.has-flyout > a.flyout-toggle;i×;o;;" ;i×;[o;;[
-o;
-;@š;i×;[o;6;@š;i×;0;o;;{ ">o;
-;@š;i×;[o;&	;@š;i×;'0;["lio;;@š;i×;["has-flyout;0;o;;{ ">o;
-;@š;i×;[o;&	;@š;i×;'0;["ao;;@š;i×;["flyout-toggle;0;o;;{ ;T;	[o;;o;;"absolute;;;@;i×;["position;	[ ; ;!;@;"i o;;o;;"0;;;@;i×;["
-right;	[ ; ;!;@;"i o;;o;;"0;;;@;i×;["top;	[ ; ;!;@;"i o;;o;;"	22px;;;@;i×;["padding;	[ ; ;!;@;"i o;;o;;"2;;;@;i×;["z-index;	[ ; ;!;@;"i o;;o;;"
-block;;;@;i×;["display;	[ ; ;!;@;"i ;@;"i o;;["6& > li.has-flyout.is-touch > a.flyout-toggle span;iØ;o;;" ;iØ;[o;;[o;
-;@â;iØ;[o;6;@â;iØ;0;o;;{ ">o;
-;@â;iØ;[o;&	;@â;iØ;'0;["lio;;@â;iØ;["has-flyouto;;@â;iØ;["is-touch;0;o;;{ ">o;
-;@â;iØ;[o;&	;@â;iØ;'0;["ao;;@â;iØ;["flyout-toggle;0;o;;{ o;
-;@â;iØ;[o;&	;@â;iØ;'0;["	span;0;o;;{ ;T;	[	o;;o;;""";;;@;iØ;["content;	[ ; ;!;@;"i o;;o;;"0;;;@;iØ;["
-width;	[ ; ;!;@;"i o;;o;;"0;;;@;iØ;["height;	[ ; ;!;@;"i o;;o;;"
-block;;;@;iØ;["display;	[ ; ;!;@;"i ;@;"i o;;["3& > li.has-flyout > a.flyout-toggle:hover span;iÙ;o;;" ;iÙ;[o;;[o;
-;@(;iÙ;[o;6;@(;iÙ;0;o;;{ ">o;
-;@(;iÙ;[o;&	;@(;iÙ;'0;["lio;;@(;iÙ;["has-flyout;0;o;;{ ">o;
-;@(;iÙ;[o;&	;@(;iÙ;'0;["ao;;@(;iÙ;["flyout-toggleo;#
-;@(;iÙ;$0;["
-hover;;%;0;o;;{ o;
-;@(;iÙ;[o;&	;@(;iÙ;'0;["	span;0;o;;{ ;T;	[o;;o;;"#141414;;;@;iÙ;["border-top-color;	[ ; ;!;@;"i ;@;"i o;;[")&.vertical > li.has-flyout > .flyout;iÚ;o;;" ;iÚ;[o;;[
-o;
-;@\;iÚ;[o;6;@\;iÚo;;@\;iÚ;["vertical;0;o;;{ ">o;
-;@\;iÚ;[o;&	;@\;iÚ;'0;["lio;;@\;iÚ;["has-flyout;0;o;;{ ">o;
-;@\;iÚ;[o;;@\;iÚ;["flyout;0;o;;{ ;T;	[o;;o;;"0;;;@;iÚ;["	left;	[ ; ;!;@;"i ;@;"i ;@;"i o;;[".flyout;iÝ;o;;" ;iÝ;[o;;[o;
-;@†;iÝ;[o;;@†;iÝ;["flyout;0;o;;{ ;T;	[o;;o;;"relative;;;@;iÝ;["position;	[ ; ;!;@;"i o;;o;;"100% !important;;;@;iÝ;["
-width;	[ ; ;!;@;"i o;;o;;"	auto;;;@;iÝ;["top;	[ ; ;!;@;"i o;;o;(;iù;iÝ;)[ ;*"	-2px;@;+["px;iÝ;["margin-right;	[ ; ;!;@;"i o;;o;;"1px 1px 0 1px;;;@;iÝ;["border-width;	[ ; ;!;@;"i o;;["&.right;iß;o;;" ;iß;[o;;[o;
-;@·;iß;[o;6;@·;ißo;;@·;iß;["
-right;0;o;;{ ;T;	[o;;o;;"	none;;;@;iß;["
-float;	[ ; ;!;@;"i o;;o;;"	auto;;;@;iß;["
-right;	[ ; ;!;@;"i o;;o;(;iú;iß;)[ ;*"	-1px;@;+["px;iß;["	left;	[ ; ;!;@;"i ;@;"i o;;["&.small, &.large;ià;o;;" ;ià;[o;;[o;
-;@Ý;ià;[o;6;@Ý;iào;;@Ý;ià;["
-small;0;o;;{ o;;[o;
-;@Ý;ià;[o;6;@Ý;iào;;@Ý;ià;["
-large;0;o;;{ ;T;	[o;;o;;"100% !important;;;@;ià;["
-width;	[ ; ;!;@;"i ;@;"i o;;["p:last-child;iá;o;;" ;iá;[o;;[o;
-;@þ;iá;[o;&	;@þ;iá;'0;["po;#
-;@þ;iá;$0;["last-child;;%;0;o;;{ ;T;	[o;;o;;"	18px;;;@;iá;["margin-bottom;	[ ; ;!;@;"i ;@;"i ;@;"i ;@;"i ;@
