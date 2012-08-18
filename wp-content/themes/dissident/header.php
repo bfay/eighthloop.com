@@ -28,22 +28,7 @@
 		<!-- end of wordpress head -->
 			
 		<!-- drop Google Analytics Here -->
-		<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-33695808-1']);
-  _gaq.push(['_setDomainName', 'eighthloop.com']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 		<!-- end analytics -->
-	
 		
 	</head>
 	
@@ -51,16 +36,21 @@
 	
 		<div id="container">
 			
-			<header class="header row" role="banner">
+			<header class="header" role="banner">
 			
-
-			
-			<a href="<?php echo home_url(); ?>" class="logo three columns" rel="nofollow"><img src="http://cdn.images.eighthloop.com/eighthloop-logo.png" alt="Eighth Loop Logo"><h3>A work in progress</h3></a>
+				<div id="inner-header" class="wrap clearfix">
 					
-			<nav class="eight columns push-one" role="navigation">		
-			<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
-			</nav>
+					<!-- to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> -->
+					<p id="logo" class="h1"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p>
+					
+					<!-- if you'd like to use the site description you can un-comment it below -->
+					<?php // bloginfo('description'); ?>
+					
+					
+					<nav role="navigation">
+						<?php bones_main_nav(); // Adjust using Menus in Wordpress Admin ?>
+					</nav>
+				
+				</div> <!-- end #inner-header -->
 			
 			</header> <!-- end header -->
-
-	

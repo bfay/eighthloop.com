@@ -12,7 +12,7 @@
   
   //Background mixin
   @mixin background {
-	  background-image: url(http://cdn.images.eighthloop.com/bg-paper.jpg);
+	  background-image: url(http://images.byronfay.com/bg-noise-lines.png);
 	  background-repeat: repeat;
   }
   
@@ -27,13 +27,6 @@
 	border-right-width: 3px;
 	border-right-style: groove;
 }
-
-@mixin border-clear {
-	border-width: thick;
-	border-color: rgba(0,0,0,0.1);
-	border-style: groove;
-
-}
 	  
   // Grid Calculation for Percentages
 
@@ -45,11 +38,9 @@
 
   @mixin defaultFontFamily {
     font-family: "proxima-nova", "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    color: $ninblack;
   }
   @mixin secondFontFamily {
-	  font-family: "calluna", serif;
-	  color: $ninblack;
+	  font-family: "calluna", serif,;
   }
 
   // Create CSS Triangles in a Breeze

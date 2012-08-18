@@ -114,13 +114,13 @@ function bones_scripts_and_styles() {
   if (!is_admin()) {
   
     // modernizr (without media query polyfill)
-    wp_register_script( 'bones-modernizr', 'http://cdn.scripts.eighthloop.com/modernizr.2.6.1.js');
+    wp_register_script( 'bones-modernizr', get_stylesheet_directory_uri() . '/library/js/libs/modernizr.custom.min.js', array(), '2.5.3', false );
  
     // register main stylesheet
-    wp_register_style( 'bones-stylesheet', 'http://maxcdn.eighthloop.com/wp-content/themes/dissident/library/css/foundation.css');
+    wp_register_style( 'bones-stylesheet', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '', 'all' );
 
     // ie-only style sheet
-    wp_register_style( 'bones-ie-only', 'http://maxcdn.eighthloop.com/wp-content/themes/dissident/library/css/ie.css', array(), '' );
+    wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
     
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
@@ -128,21 +128,17 @@ function bones_scripts_and_styles() {
     }
     
     //adding scripts file in the footer
-    wp_register_script( 'bones-js', 'http://cdn.scripts.eighthloop.com/scripts.js', array( 'jquery' ), '', true );
+    wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
     
     // enqueue styles and scripts
     wp_enqueue_script( 'bones-modernizr' ); 
     wp_enqueue_style( 'bones-stylesheet' ); 
     wp_enqueue_style('bones-ie-only');
     /*
-    I recommend using a plugin to call jQuery
+    I reccomend using a plugin to call jQuery
     using the google cdn. That way it stays cached
-    and your site will load faster.  Which is what I did here
+    and your site will load faster.
     */
-    wp_deregister_script( 'jquery' );
-    wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
-    wp_enqueue_script( 'jquery' );
-
     wp_enqueue_script( 'jquery' ); 
     wp_enqueue_script( 'bones-js' ); 
     
@@ -168,7 +164,7 @@ function bones_theme_support() {
 	add_theme_support('post-thumbnails');   
 	
 	// default thumb size   
-	set_post_thumbnail_size(150, 150, true);   
+	set_post_thumbnail_size(125, 125, true);   
 	
 	// wp custom background (thx to @bransonwerner for update)
 	add_theme_support( 'custom-background',

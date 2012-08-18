@@ -1,13 +1,10 @@
 <?php get_header(); ?>
-		<div class="main-content">	
 			
-			<div id="content" class="row">
+			<div id="content">
 			
-				<div class="eleven columns centered">
+				<div id="inner-content" class="wrap clearfix">
 			
-				<div id="inner-content">
-			
-				    <div id="main" class="nine columns" role="main">
+				    <div id="main" class="eightcol first clearfix" role="main">
 
 					    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
@@ -71,10 +68,7 @@
 				    <?php get_sidebar(); // sidebar 1 ?>
 				    
 				</div> <!-- end #inner-content -->
-				
-				</div> <!-- end columns -->
     
 			</div> <!-- end #content -->
-		</div><!-- end wrap -->
 
 <?php get_footer(); ?>
