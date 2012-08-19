@@ -1,0 +1,500 @@
+/* Requires
+globals.css */
+/*=====================================================
+Navigation (with dropdowns)
+======================================================*/
+.navbar {
+max-width: $rowWidth;
+width: 100%;
+display: table;
+border: 1px solid;
+border-color: darken($mainColor,30%);
+margin-bottom: ms(1);
+margin-top: ms(0)/2;
+background: $mainColor;/* Change this to suit the color theme of your site */
+-webkit-box-sizing:border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+}
+.navbar .logo {
+display: table-cell;
+height: $navBarHeight;
+margin: 0;
+line-height: 0;
+vertical-align: middle;
+}
+.navbar .logo a {
+display: block;
+height: $navBarHeight;
+line-height: 1.2;
+padding: 0 0 0 15px;
+overflow: hidden;
+}
+.navbar a.toggle {
+display: none;
+}
+.navbar ul {
+display: table;
+width: 100%;
+float: none;
+vertical-align: middle;
+margin-bottom: 0;
+}
+.navbar ul li {
+display: table-cell;
+float: none;
+list-style-type: none;
+margin-bottom: 0;
+margin-left: 0;
+text-align: center;
+border-right: solid 1px darken($mainColor,40%);@include box-shadow(1px 0 0 fade-out($shinyEdge,.3) inset,1px 0 0 fade-out($shinyEdge,.3));
+}
+.navbar > ul > li > a {
+display: block;
+height: $navBarHeight;
+line-height: 1.2;
+font-size: ms(0);
+padding: 0 15px;
+white-space: nowrap;
+color: #fff;
+font-weight: bold;
+text-shadow: 0 1px 2px darken($mainColor,30%),
+0 1px 0 darken($mainColor,30%);
+}
+.navbar > ul > li .field {
+position: relative;
+display: inline-block;
+text-align: center;
+}
+.navbar > ul > li .field .search input {
+line-height: 1;
+}
+.navbar > ul > li:hover > a {
+position: relative;
+background: lighten($mainColor,10%);
+z-index: 1000;
+}
+.navbar > ul > li > li > a {
+padding: 0 33px;
+}
+.navbar > ul > li:last-child,.navbar > ul > li:last-child a:hover {
+border-right: none;
+}
+/**** Navbar positioning for Microsoft's browser who deserves not to be mentioned ****/
+.ie7 .navbar > ul {
+width: auto;
+}
+.ie7 .navbar,.ie7 .navbar > ul > li > a {
+display: block;
+}
+.ie7 .navbar .logo,.ie7 .navbar ul,.ie7 .navbar ul li {
+float: left;
+display: inline-block;
+}
+.ie7 .navbar .logo a {
+display: block;
+overflow: hidden;
+}
+.ie7 .navbar > ul > li .field {
+display: block;
+padding: 12px 18px 0;
+width: 80%;
+}
+/******** Pretty Navbar Styles *********/
+.pretty.navbar {
+border-radius: 4px;
+background: -moz-linear-gradient(top,lighten($mainColor,50%) 0%,darken($mainColor,10%) 100%);/* FF3.6+ */
+background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,lighten($mainColor,50%)),color-stop(100%,darken($mainColor,20%)));/* Chrome,Safari4+ */
+background:-webkit-linear-gradient(top,lighten($mainColor,50%) 0%,darken($mainColor,10%) 100%);/* Chrome10+,Safari5.1+ */
+background:-o-linear-gradient(top,lighten($mainColor,50%) 0%,darken($mainColor,10%) 100%);/* Opera 11.10+ */
+background:-ms-linear-gradient(top,lighten($mainColor,50%) 0%,darken($mainColor,10%) 100%);/* IE10+ */
+background:linear-gradient(top,lighten($mainColor,50%) 0%,darken($mainColor,10%) 100%);/* W3C */
+filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten($mainColor,50%)',endColorstr='darken($mainColor,20%)',GradientType=0 );/* IE6-9 */
+-webkit-box-shadow:inset 0 1px 1px darken($mainColor,30%)
+0 1px 2px rgba(0,0,0,0.61) !important;/* Remove this line if you dont want a dropshadow on your navigation*/
+box-shadow:inset 0 1px 1px darken($mainColor,30%)
+0 1px 2px rgba(0,0,0,0.61) !important;/* Remove this line if you dont want a dropshadow on your navigation*/
+}
+.pretty.navbar li {
+-webkit-box-shadow: inset 1px 0 0 darken($mainColor,30%);
+box-shadow: inset 1px 0 0 darken($mainColor,30%);
+}
+.pretty.navbar ul:first-child li:first-child a {
+border-radius: 4px 0 0 4px;
+}
+.pretty.navbar ul li:last-child a {
+border-radius: 0 4px 4px 0;
+}
+.pretty.navbar > ul > li:hover > a {
+-webkit-box-shadow: 2px 0 0 darken($mainColor,30%);
+box-shadow: 2px 0 0 darken($mainColor,30%);
+}
+.pretty.navbar > ul > li:first-child,.pretty.navbar > ul > li:first-child a:hover {
+box-shadow: none;
+}
+/******** CSS3 Dropdown Menu Styles **********/
+.navbar li .dropdown {
+width: auto;
+min-width: 0px;
+max-width: $navFlyoutBaseWidth;
+height: 0;
+position: absolute;
+background: lighten($mainColor,90%);
+overflow: hidden;
+z-index: 999;
+}
+.navbar li:hover .dropdown {
+min-height: $navBarHeight;
+max-height: $navFlyoutBaseWidth;
+height: auto;
+width: 100%;
+padding: 0;
+border-top: 1px solid darken($mainColor,20%);
+-webkit-box-shadow: 0px 3px 4px rgba(0,0,0,.3);
+box-shadow: 0px 3px 4px rgba(0,0,0,.3);
+-webkit-transition: ease-in-out .4s;
+-moz-transition: ease-in-out .4s;
+-o-transition: ease-in-out .4s;
+-ms-transition: ease-in-out .4s;
+transition: ease-in-out .4s;
+}
+.navbar li .dropdown ul {
+margin: 0;
+}
+.navbar li .dropdown ul > li {
+display: block;
+width: 100%;
+float: left;
+text-align: left;
+height: auto;
+font: ms(0);
+font-family: $bodyFontFamily;
+border-radius: none;
+}
+.navbar li .dropdown ul > li a {
+display: block;
+line-height: $navBarHeight;
+height: 1.2;
+padding: 0 20px;
+border-bottom: 1px solid darken($mainColor,20%);
+}
+.navbar ul .dropdown ul li:first-child a {
+border-radius: 0;
+}
+.navbar li .dropdown li a:hover {
+background: lighten($mainColor,10%);
+}
+@media only screen and (max-width:767px) {.navbar,.pretty.navbar {
+position: relative;
+background: transparent;
+border: none;
+text-align: center;
+}
+.navbar .logo {
+float: left;
+display: inline;
+}
+.navbar a.toggle {
+position: relative;
+float: right;
+display: inline-block;
+right: 10px;/* Move me around */
+top:5px;/* Move me around */
+background:$mainColor;
+width: $navBarHeight;
+height: $navBarHeight;
+line-height: 1;
+border-radius: 4px;
+-webkit-transition-duration: .3s;/* Saf3.2+,Chrome */
+-moz-transition-duration:.3s;/* FF4+ */
+-ms-transition-duration:.3s;/* IE10 */
+-o-transition-duration:.3s;/* Opera 10.5+ */
+transition-duration:.3s;
+}
+.pretty.navbar a.toggle {
+border: 1px solid darken($mainColor,50%);
+background: -moz-linear-gradient(top,lighten($mainColor,50%) 0%,darken($mainColor,20%) 100%);/* FF3.6+ */
+background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,lighten($mainColor,50%)),color-stop(100%,darken($mainColor,20%)));/* Chrome,Safari4+ */
+background:-webkit-linear-gradient(top,lighten($mainColor,50%) 0%,darken($mainColor,20%) 100%);/* Chrome10+,Safari5.1+ */
+background:-o-linear-gradient(top,lighten($mainColor,50%) 0%,darken($mainColor,20%) 100%);/* Opera 11.10+ */
+background:-ms-linear-gradient(top,lighten($mainColor,50%) 0%,darken($mainColor,20%) 100%);/* IE10+ */
+background:linear-gradient(top,lighten($mainColor,50%) 0%,darken($mainColor,20%) 100%);/* W3C */
+filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten($mainColor,50%)',endColorstr='darken($mainColor,20%)',GradientType=0 );/* IE6-9 */
+-webkit-box-shadow:inset 0 1px 1px lighten($mainColor,20%),
+0 1px 1px lighten($mainColor,20%);
+box-shadow: inset 0 1px 1px lighten($mainColor,20%),
+0 1px 1px lighten($mainColor,20%);
+}
+.navbar a.toggle:hover,.navbar a.toggle.active {
+background: lighten($secondaryColor,50%);
+-webkit-box-shadow: none;
+box-shadow: none;
+-webkit-transition-duration: .4s;/* Saf3.2+,Chrome */
+-moz-transition-duration:.4s;/* FF4+ */
+-ms-transition-duration:.4s;/* IE10 */
+-o-transition-duration:.4s;/* Opera 10.5+ */
+transition-duration:.4s;
+}
+.navbar a.toggle.active {
+background: $mainColor;
+}
+.navbar ul {
+position: absolute;
+max-width: $rowWidth;
+width: 100%;
+height: 0;
+max-height: 0;
+top: 54px;
+right: 3.125%;
+overflow: hidden;
+display: inline-block;
+background: #fff;
+border-radius: 4px;
+-webkit-transition-duration: .2s;/* Saf3.2+,Chrome */
+-moz-transition-duration:.2s;/* FF4+ */
+-ms-transition-duration:.2s;/* IE10 */
+-o-transition-duration:.2s;/* Opera 10.5+ */
+transition-duration:.2s;
+-webkit-box-shadow: 0px 3px 4px rgba(0,0,0,.3);
+box-shadow: 0px 3px 4px rgba(0,0,0,.3);
+}
+.navbar ul.active {
+max-width: $rowWidth;
+width: 100%;
+height: auto;
+max-height: 600px;
+z-index: 999;
+-webkit-transition-duration: .5s;/* Saf3.2+,Chrome */
+-moz-transition-duration:.5s;/* FF4+ */
+-ms-transition-duration:.5s;/* IE10 */
+-o-transition-duration:.5s;/* Opera 10.5+ */
+transition-duration:.5s;
+}
+.navbar ul li {
+display: block;
+width: 100%;
+border-right: 0 !important;
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+.pretty.navbar ul li {
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+.navbar ul li > a {
+font-size: 22px !important;
+border: 1px solid darken($mainColor,20%);
+background: lighten($secondaryColor,50%);/* Old browsers */
+}
+.navbar > ul > li .field {
+padding-top: 10px;
+padding-bottom: 10px;
+width: 90%;
+}
+.navbar > ul > li .search {
+border: 1px solid darken($mainColor,10%);
+-webkit-box-shadow: inset 0 1px 3px darken($mainColor,10%);
+box-shadow: inset 0 1px 3px darken($mainColor,10%);
+}
+.navbar li a:hover,.navbar > ul > li:first-child,.navbar > ul > li:first-child a:hover,.navbar > ul > li:last-child,.navbar > ul > li:last-child a:hover {
+-webkit-box-shadow: none;
+box-shadow: none;
+}
+.navbar > ul > li:last-child,.navbar > ul > li:last-child a:hover {
+border-right: none;
+}
+.navbar li:first-child a {
+border-radius: 4px 4px 0 0 !important;
+}
+.navbar li:last-child a {
+border-radius: 0 0 4px 4px !important;
+}
+.navbar li:hover .dropdown {
+display: none;
+}
+.navbar ul li > a {
+background: transparent;
+border: none;
+color: #d14728;
+font-size: ms(0);
+border-bottom: 1px solid darken($mainColor,10%);
+border-radius: none;
+text-shadow: none;
+}
+.navbar ul li:hover > a {
+background: #f5f5f5;
+border-right: none;
+-webkit-box-shadow: none !important;
+box-shadow: none !important;
+}
+.pretty.navbar {
+background: transparent;/* border:1px solid darken($mainColor,20%);
+background: -moz-linear-gradient(top,lighten($mainColor,50%) 0%,darken($mainColor,20%) 100%);
+background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,lighten($mainColor,50%)),color-stop(100%,darken($mainColor,20%)));
+background: -webkit-linear-gradient(top,lighten($mainColor,50%) 0%,darken($mainColor,20%) 100%);
+background: -o-linear-gradient(top,lighten($mainColor,50%) 0%,darken($mainColor,20%) 100%);
+background: -ms-linear-gradient(top,lighten($mainColor,50%) 0%,darken($mainColor,20%) 100%);
+background: linear-gradient(top,lighten($mainColor,50%) 0%,darken($mainColor,20%) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='lighten($mainColor,50%)',endColorstr='darken($mainColor,20%)',GradientType=0 );
+-webkit-box-shadow: inset 0 1px 1px lighten($mainColor,20%)
+0 1px 2px rgba(0,0,0,0.61) !important;
+box-shadow: inset 0 1px 1px lighten($mainColor,20%)
+0 1px 2px rgba(0,0,0,0.61) !important;Remove this line if you dont want a dropshadow on your buttons
+border-radius:0;*/
+}
+.pretty.navbar ul li .btn {
+margin-top: 0px;
+}
+
+}
+/*=====================================================
+Sub Navigation
+======================================================*/
+.subnav {
+display: block;
+width: auto;
+overflow: hidden;
+margin: 0 0 18px 0;
+padding-top: 4px;
+}
+.subnav li,.subnav dt,.subnav dd {
+float: left;
+display: inline;
+margin-left: 9px;
+margin-bottom: 4px;
+}
+.subnav li:first-child,.subnav dt:first-child,.subnav dd:first-child {
+margin-left: 0;
+}
+.sub-nav dt {
+color: #999;
+font-weight: normal;
+}
+.subnav li a,.subnav dd a {
+color: darken($mainColor,20%);
+font-size: 15px;
+text-decoration: none;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+.subnav li.active a,.subnav dd.active a {
+background: lighten($mainColor,50%);
+padding: 5px 9px;
+text-shadow: 0 1px 1px lighten($mainColor,20%);
+}
+/** Drawers **/
+.drawer {
+position: relative;
+width: 100%;
+max-height: 0;
+background: #222;
+-webkit-box-shadow: inset 0 -3px 5px #000,
+inset 0 3px 5px #000
+;
+box-shadow: inset 0 -3px 5px #000,
+inset 0 3px 5px #000
+;
+overflow: hidden;
+-webkit-transition-duration: .3s;/* Saf3.2+,Chrome */
+-moz-transition-duration:.3s;/* FF4+ */
+-ms-transition-duration:.3s;/* IE10 */
+-o-transition-duration:.3s;/* Opera 10.5+ */
+transition-duration:.3s;
+}
+.drawer.active {
+height: auto;
+max-height: 800px;
+-webkit-transition-duration: .5s;/* Saf3.2+,Chrome */
+-moz-transition-duration:.5s;/* FF4+ */
+-ms-transition-duration:.5s;/* IE10 */
+-o-transition-duration:.5s;/* Opera 10.5+ */
+transition-duration:.5s;
+}
+/** Intrinsic Ratio video embedding (maintains aspect ratio) **/
+body .video {
+width: 100%;
+position: relative;
+height: 0;
+padding-bottom: 56.25%;
+}
+.youtube.video,.vimeo.video {
+padding-top: 30px;
+}
+.video > video,.video > iframe,.video > object,.video > embed {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+}
+/** Line Section Row Dividers **/
+.line {
+padding-bottom: 20px;
+margin-bottom: 20px;
+border-bottom-style: solid;
+border-bottom-color: #ccc;
+}
+.thin.line {
+border-width: 1px;
+}
+.medium.line {
+border-width: 2px;
+}
+.thick.line {
+border-width: 4px;
+}
+/* Skip Links */
+.skipnav li {
+display: inline-block;
+margin-left: 2%;
+}
+.skipnav li:first-child {
+margin-left: 0;
+}
+.skiplink a,.skipnav a {
+background: lighten($mainColor,50%);
+color: darken($mainColor,20%);
+padding: 6px 15px;
+border-radius: 4px;
+text-shadow: 0 1px 1px #77d58e;
+}
+.skiplink a:hover,.skipnav a:hover {
+background: $mainColor;
+}
+.skiplink a i,.skipnav a i {
+margin-left: 10px;
+}
+/* Preformatted Text */
+pre {
+background-color: darken($mainColor,70%);
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+-o-border-radius: 4px;
+-ms-border-radius: 4px;
+-khtml-border-radius: 4px;
+border-radius: 4px;
+-webkit-box-shadow: inset 0 2px 2px #000;
+box-shadow: inset 0 2px 2px #000;
+border: 1px solid lighten($mainColor,50%);
+color: #fff;
+font-family: Courier,monospace;
+font-size: ms(0)-1;
+text-align: left;
+overflow: hidden !important;
+padding: 20px;
+white-space: pre-wrap;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+-ms-box-sizing: border-box;
+box-sizing: border-box;
+}
+code {
+color: #d14627;
+font-family: Courier,monospace;
+font-size: ms(0)-1;
+padding: 2px 4px 2px 4px;
+background: lighten($mainColor,50%);
+border-radius: 4px;
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<site>
+<localinfo sitename="www.eighthloop.dev" ftporrdsserver="FALSE" localroot="Loop:Users:byronfay:Development:www.eighthloop.dev:" assetfolder="Loop:Users:byronfay:Development:www.eighthloop.dev:SpryAssets" imagefolder="" spacerfilepath="" refreshlocal="TRUE" autouploadfiles="FALSE" maintainsyncinfo="TRUE" rewritedocrellinks="FALSE" cache="TRUE" httpaddress="http://www.eighthloop.dev/" relativeTo="DOCUMENT" caseSensitiveLinks="TRUE" curserver="webserver"/>
+<remoteinfo  accesstype="lan" remoteroot="Loop/Users/byronfay/Development/www.eighthloop.dev" refreshremote="FALSE" checkoutname="" emailaddress="" enablecheckin="FALSE" checkoutwhenopen="TRUE"/>
+<designnotes usedesignnotes="TRUE" sharedesignnotes="FALSE"/>
+<sitemap homepage="" pagesperrow="200" columnwidth="125" showdependentfiles="FALSE" showpagetitles="FALSE" showhiddenfiles="FALSE"/>
+<appserverinfo servermodel="PHP MySQL" urlprefix="http://www.eighthloop.dev/" connectionsmigrated="FALSE" serverobjectsversion="1" defaultdoctype="HTML" accesstype="lan" remoteroot="Loop/Users/byronfay/Development/www.eighthloop.dev" refreshremote="FALSE" testsvrbinaccesstype="none"/>
+<cloaking enabled="TRUE" patterns="FALSE">
+        <cloakedfolder folder="dw_php_codehinting.config"/>
+        <cloakedpattern pattern=".fla"/>
+        <cloakedpattern pattern=".psd"/>
+</cloaking>
+<contributorintegration enabled="FALSE"/>
+</site>

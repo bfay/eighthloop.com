@@ -1,0 +1,8 @@
+@import "font-size";
+@import "css-triangle";
+@import "respond-to";
+@import "clearfix";
+@import "semantic-grid";
+
+// instead of using these import statements and having foundation.scss call for importing all.scss, I 
+// copy and pasted the code for all of the files into _mixins.scss since it was so small then minified it since you never touch these except to add new ones
