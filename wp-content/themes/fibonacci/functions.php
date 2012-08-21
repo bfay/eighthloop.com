@@ -12,7 +12,7 @@
  * @since Fibonacci 1.0
  */
 if ( ! isset( $content_width ) )
-	$content_width = 1080; /* pixels */
+	$content_width = 1280; /* pixels */
 
 if ( ! function_exists( 'fibonacci_setup' ) ):
 /**
@@ -98,6 +98,14 @@ function fibonacci_scripts() {
 	global $post;
 
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
+	
+	wp_register_style( 'fibonacci', 
+    get_template_directory_uri() . '/css/fibonacci.css', 
+    array(), 
+    '20120820', 
+    'all' );
+     // enqueing:
+  wp_enqueue_style( 'fibonacci' );
 
 	wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
 

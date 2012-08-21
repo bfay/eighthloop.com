@@ -51,6 +51,10 @@
 	<!-- Startup Image iPhone (320x460) -->
 	<link rel="apple-touch-startup-image" href="<?php echo get_template_directory_uri(); ?>/images/iphone_load.png" media="screen and (max-device-width: 320px)" />
 	 <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+	 
+	 <script type="text/javascript" src="//use.typekit.net/jky1bld.js"></script>
+	 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	 
 	
 				<!-- drop Google Analytics Here -->
 		<script type="text/javascript">
@@ -76,8 +80,11 @@
 
 <body <?php body_class(); ?>>
 <div class="container-wrap">
+<div id="page" class="hfeed site">
+	<?php do_action( 'before' ); ?>
+	<header id="masthead" class="site-header wrap" role="banner">
 
-<header class="wrap">
+
 	<div class="row">
 	
 	<nav class="ribbon">
@@ -94,8 +101,10 @@
 			<h4>Contact</h4>
 			</div>
 	</nav>
-	</div>	
+	</div>
+		
 	</header><!-- brown wrap -->
+	</div>
 
 
 	<div id="main">
