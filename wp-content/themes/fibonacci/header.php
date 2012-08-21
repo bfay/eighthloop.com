@@ -75,20 +75,27 @@
 
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<?php do_action( 'before' ); ?>
-	<header id="masthead" class="site-header" role="banner">
-		<hgroup>
-			<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</hgroup>
+<div class="container-wrap">
 
-		<nav role="navigation" class="site-navigation main-navigation">
-			<h1 class="assistive-text"><?php _e( 'Menu', 'fibonacci' ); ?></h1>
-			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'fibonacci' ); ?>"><?php _e( 'Skip to content', 'fibonacci' ); ?></a></div>
+<header class="wrap">
+	<div class="row">
+	
+	<nav class="ribbon">
+			<div class="one column nav-left">
+			<h4>Home</h4>
+			</div>
+			<div class="one column nav-left">
+			<h4>About</h4>
+			</div>
+			<div class="one column push-six nav-right">
+			<h4>Journal</h4>
+			</div>
+			<div class="four columns nav-right">
+			<h4>Contact</h4>
+			</div>
+	</nav>
+	</div>	
+	</header><!-- brown wrap -->
 
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- .site-navigation .main-navigation -->
-	</header><!-- #masthead .site-header -->
 
 	<div id="main">

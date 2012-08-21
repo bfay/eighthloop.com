@@ -1,6 +1,8 @@
 
-/* The Grid ---------------------- */
-.row { width: 940px; max-width: 100%; min-width: 768px; margin: 0 auto; }
+/* The Grid ---------------------- 
+	Based off of the most popular screen size as of May 17th 2012 of 1280px x 768px
+*/
+.row { width: 1280px; max-width: 100%; min-width: 768px; margin: 0 auto; }
 .row .row { width: auto; max-width: none; min-width: 0; margin: 0 -5px; }
 .row.collapse .column, .row.collapse .columns { padding: 0; }
 .row .row { width: auto; max-width: none; min-width: 0; margin: 0 -5px; }
@@ -9,97 +11,128 @@
 .column, .columns { float: left; min-height: 1px; padding: 0 5px; position: relative; }
 .column.centered, .columns.centered { float: none; margin: 0 auto; }
 
+/* The Fibonacci Proportional shorthand ---------------------- */
+
+.full, .row .full { width: 100%; }
+.xlarge, .row .xlarge { width: 84.6153846153846%; }
+.large, .row .large { width: 61.5384615384615%; }
+.med, .row .med { width: 38.4615384615385%; }
+.small, .row .small { width: 23.0769230769231%; }
+.mini, .row .mini { width: 15.3846153846154%; }
+
+//fallback sizes not in proportion
+.quarter, .row .quarter { width: 25%; }
+.half, .row .half { width: 50%; }
+.three-quarter, .row .three-quarter { width: 75%; }
+
 /*  These are annoying, so unless necessary, leave them out [class*="column"] + [class*="column"]:last-child { float: right; }
 
 [class*="column"] + [class*="column"].end { float: left; }  */
 
-.one, .row .one { width: 7.69231%; }
+/* Columns in proportion to the Fibonacci Sequence 0 1 1 2 3 5 8 13.  Therefore each row is 1/13th */
 
-.two, .row .two { width: 15.38462%; }
+.one, .row .one { width: 7.69230769230769%; }
 
-.three, .row .three { width: 23.07692%; }
+.two, .row .two { width: 15.3846153846154%; }
 
-.four, .row .four { width: 30.76923%; }
+.three, .row .three { width: 23.0769230769231%; }
 
-.five, .row .five { width: 38.46154%; }
+.four, .row .four { width: 30.7692307692308%; }
 
-.six, .row .six { width: 46.15385%; }
+.five, .row .five { width: 38.4615384615385%; }
 
-.seven, .row .seven { width: 53.84615%; }
+.six, .row .six { width: 46.1538461538462%; }
 
-.eight, .row .eight { width: 61.53846%; }
+.seven, .row .seven { width: 53.8461538461538%; }
 
-.nine, .row .nine { width: 69.23077%; }
+.eight, .row .eight { width: 61.5384615384615%; }
 
-.ten, .row .ten { width: 76.92308%; }
+.nine, .row .nine { width: 69.2307692307692%; }
 
-.eleven, .row .eleven { width: 84.61538%; }
+.ten, .row .ten { width: 76.9230769230769%; }
 
-.twelve, .row .twelve { width: 92.30769%; }
+.eleven, .row .eleven { width: 84.6153846153846%; }
+
+.twelve, .row .twelve { width: 92.3076923076923%; }
 
 .thirteen, .row .thirteen { width: 100%; }
 
-.row .offset-by-one { margin-left: 7.69231%; }
+.row .offset-by-one { margin-left: 7.69230769230769%; }
 
-.row .offset-by-two { margin-left: 15.38462%; }
+.row .offset-by-two { margin-left: 15.3846153846154%; }
 
-.row .offset-by-three { margin-left: 23.07692%; }
+.row .offset-by-three { margin-left: 23.0769230769231%; }
 
-.row .offset-by-four { margin-left: 30.76923%; }
+.row .offset-by-four { margin-left: 30.7692307692308%; }
 
-.row .offset-by-five { margin-left: 38.46154%; }
+.row .offset-by-five { margin-left: 38.4615384615385%; }
 
-.row .offset-by-six { margin-left: 46.15385%; }
+.row .offset-by-six { margin-left: 46.1538461538462%; }
 
-.row .offset-by-seven { margin-left: 53.84615%; }
+.row .offset-by-seven { margin-left: 53.8461538461538%; }
 
-.row .offset-by-eight { margin-left: 61.53846%; }
+.row .offset-by-eight { margin-left: 61.5384615384615%; }
 
-.row .offset-by-nine { margin-left: 69.23077%; }
+.row .offset-by-nine { margin-left: 69.2307692307692%; }
 
-.row .offset-by-ten { margin-left: 76.92308%; }
+.row .offset-by-ten { margin-left: 76.9230769230769%; }
 
-.row .offset-by-eleven { margin-left: 84.61538%; }
+.row .offset-by-eleven { margin-left: 84.6153846153846%; }
 
-.push-two { left: 15.38462%; }
+.push-two { left: 15.3846153846154%; }
 
-.pull-two { right: 15.38462%; }
+.pull-two { right: 15.3846153846154%; }
 
-.push-three { left: 23.07692%; }
+.push-three { left: 23.0769230769231%; }
 
-.pull-three { right: 23.07692%; }
+.pull-three { right: 23.0769230769231%; }
 
-.push-four { left: 30.76923%; }
+.push-four { left: 30.7692307692308%; }
 
-.pull-four { right: 30.76923%; }
+.pull-four { right: 30.7692307692308%; }
 
-.push-five { left: 38.46154%; }
+.push-five { left: 38.4615384615385%; }
 
-.pull-five { right: 38.46154%; }
+.pull-five { right: 38.4615384615385%; }
 
-.push-six { left: 46.15385%; }
+.push-six { left: 46.1538461538462%; }
 
-.pull-six { right: 46.15385%; }
+.pull-six { right: 46.1538461538462%; }
 
-.push-seven { left: 53.84615%; }
+.push-seven { left: 53.8461538461538%; }
 
-.pull-seven { right: 53.84615%; }
+.pull-seven { right: 53.8461538461538%; }
 
-.push-eight { left: 61.53846%; }
+.push-eight { left: 61.5384615384615%; }
 
-.pull-eight { right: 61.53846%; }
+.pull-eight { right: 61.5384615384615%; }
 
-.push-nine { left: 69.23077%; }
+.push-nine { left: 69.2307692307692%; }
 
-.pull-nine { right: 69.23077%; }
+.pull-nine { right: 69.2307692307692%; }
 
-.push-ten { left: 76.92308%; }
+.push-ten { left: 76.9230769230769%; }
 
-.pull-ten { right: 76.92308%; }
+.pull-ten { right: 76.9230769230769%; }
 
-.push-eleven { left: 84.61538%; }
+.push-eleven { left: 84.6153846153846%; }
 
-.pull-eleven { right: 84.61538%; }
+.pull-eleven { right: 84.6153846153846%; }
+
+.row, .one.centered { margin-left: 46.1538461538462%; }
+.row, .two.centered { margin-left: 42.3076923076923%; }
+.row, .three.centered { margin-left: 38.4615384615385%; }
+.row, .four.centered { margin-left: 34.6153846153846%; }
+.row, .five.centered { margin-left: 30.7692307692308%; }
+.row, .six.centered { margin-left: 26.9230769230769%; }
+.row, .seven.centered { margin-left: 23.0769230769231%; }
+.row, .eight.centered { margin-left: 19.2307692307692%; }
+.row, .nine.centered { margin-left: 15.3846153846154%; }
+.row, .ten.centered { margin-left: 11.5384615384615%; }
+.row, .eleven.centered { margin-left: 7.69230769230769%; }
+.row, .twelve.centered { margin-left: 3.84615384615385%; }
+
+
 
 img, object, embed { max-width: 100%; height: auto; }
 

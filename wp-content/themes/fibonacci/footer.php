@@ -22,6 +22,6 @@
 </div><!-- #page .hfeed .site -->
 
 <?php wp_footer(); ?>
-
+</div>
 </body>
 </html>

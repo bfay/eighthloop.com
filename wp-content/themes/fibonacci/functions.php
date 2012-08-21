@@ -12,7 +12,7 @@
  * @since Fibonacci 1.0
  */
 if ( ! isset( $content_width ) )
-	$content_width = 640; /* pixels */
+	$content_width = 1080; /* pixels */
 
 if ( ! function_exists( 'fibonacci_setup' ) ):
 /**
