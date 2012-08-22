@@ -2,10 +2,9 @@
 /* The Grid ---------------------- 
 	Based off of the most popular screen size as of May 17th 2012 of 1280px x 768px
 */
-.row { width: 1280px; max-width: 100%; min-width: 768px; margin: 0 auto; }
+.row { width: 100%; max-width: 1920px; min-width: 480px; margin: 0 auto; }
 .row .row { width: auto; max-width: none; min-width: 0; margin: 0 -5px; }
 .row.collapse .column, .row.collapse .columns { padding: 0; }
-.row .row { width: auto; max-width: none; min-width: 0; margin: 0 -5px; }
 .row .row.collapse { margin: 0; }
 
 .column, .columns { float: left; min-height: 1px; padding: 0 5px; position: relative; }
@@ -25,9 +24,11 @@
 .half, .row .half { width: 50%; }
 .three-quarter, .row .three-quarter { width: 75%; }
 
-/*  These are annoying, so unless necessary, leave them out [class*="column"] + [class*="column"]:last-child { float: right; }
+/*  These are annoying, so unless necessary, leave them out 
 
-[class*="column"] + [class*="column"].end { float: left; }  */
+[class*="column"] + [class*="column"]:last-child { float: right; }
+
+[class*="column"] + [class*="column"].end { float: left; } */ 
 
 /* Columns in proportion to the Fibonacci Sequence 0 1 1 2 3 5 8 13.  Therefore each row is 1/13th */
 

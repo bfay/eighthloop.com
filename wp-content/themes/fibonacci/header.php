@@ -54,6 +54,10 @@
 	 
 	 <script type="text/javascript" src="//use.typekit.net/jky1bld.js"></script>
 	 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+	 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js'></script>
+    <script src='js/jquery.color-RGBa-patch.js'></script>
+    <script src='js/example.js'></script>
+
 	 
 	
 				<!-- drop Google Analytics Here -->
@@ -78,33 +82,44 @@
 </head>
 
 
-<body <?php body_class(); ?>>
-<div class="container-wrap">
+<body class="container-wrap">
+<div class="header-wrap">
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
-	<header id="masthead" class="site-header wrap" role="banner">
+	<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+			<div class="row">
+				<div class="xlarge centered ribbon">
 
+					</div><!-- end ribbon container -->
+					</div><!-- end ribbon row -->
+			
+				</hgroup>
+<div class="row">
 
-	<div class="row">
-	
-	<nav class="ribbon">
-			<div class="one column nav-left">
-			<h4>Home</h4>
-			</div>
-			<div class="one column nav-left">
-			<h4>About</h4>
-			</div>
-			<div class="one column push-six nav-right">
-			<h4>Journal</h4>
-			</div>
-			<div class="four columns nav-right">
-			<h4>Contact</h4>
-			</div>
-	</nav>
-	</div>
+		<div class="nav-wrap full text-center">
+
+		<ul class="group" id="example-one">
+            <li class="current_page_item"><a href="/index.php">Home</a></li>
+				<li><a href="/journal">Journal</a></li>
+				<li><a href="/about">About</a></li>
+				<li><a href="/contact">Contact</a></li>
+				</ul>
 		
-	</header><!-- brown wrap -->
+		
+		</div>
+</div>
+		
+		<div class="row">
+				<div class="home-slider xlarge centered">
+
+			<img src="http://8images.eighthloop.com/slider.png" alt="Eighthloop is composed of 2 smart guys working to bring style to the web"/>
+
+			</div><!-- end slider -->
+			</div><!-- end row -->
+		
+	</header><!-- #masthead .site-header -->
+	</div>
 	</div>
 
-
-	<div id="main">
+	<div id="main" class="main-content">
